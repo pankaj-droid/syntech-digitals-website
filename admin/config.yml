@@ -1,0 +1,190 @@
+# ============================================================
+# DECAP CMS CONFIGURATION — Syntech Digitals
+# ============================================================
+# HOW TO SETUP:
+# 1. Push this folder to a GitHub repository
+# 2. Connect repo to Netlify (netlify.com → New site from Git)
+# 3. Netlify → Site Settings → Identity → Enable Identity
+# 4. Netlify → Identity → Invite users (invite yourself)
+# 5. Go to yourdomain.netlify.app/admin to edit content
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Media uploads will be stored here
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Show the publish preview button
+publish_mode: editorial_workflow
+
+collections:
+  # ---- SITE SETTINGS ----
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+
+      # Basic Site Info
+      - name: "site_info"
+        label: "Basic Info (Name, Phone, Email)"
+        file: "content/data.json"
+        format: json
+        fields:
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Agency Name", name: "name", widget: "string", hint: "Your agency/brand name" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string", hint: "e.g. +91 98765 43210" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "WhatsApp Number", name: "whatsapp", widget: "string", hint: "Country code + number, no spaces. e.g. 919876543210" }
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "CTA Button Text", name: "cta_text", widget: "string", default: "Get Started" }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Top Badge Text", name: "badge", widget: "string" }
+              - { label: "Main Headline", name: "headline", widget: "string" }
+              - { label: "Highlighted Word (shown in gradient)", name: "headline_accent", widget: "string" }
+              - { label: "Subtext / Description", name: "subtext", widget: "text" }
+              - { label: "Primary Button Text", name: "cta_primary", widget: "string" }
+              - { label: "Secondary Button Text", name: "cta_secondary", widget: "string" }
+              - label: "Mini Stats (3 numbers below buttons)"
+                name: "mini_stats"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "string", hint: "e.g. 500+" }
+                  - { label: "Label", name: "label", widget: "string", hint: "e.g. Projects" }
+          - label: "Scrolling Ticker (marquee)"
+            name: "marquee"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+          - label: "Big Stats Section"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "e.g. 500" }
+              - { label: "Suffix", name: "suffix", widget: "string", hint: "e.g. +" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - label: "Service Cards"
+                name: "items"
+                widget: "list"
+                fields:
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["search", "share", "code", "target", "pen", "mail", "star", "cart"]
+                    hint: "search=SEO, share=Social, code=Web Dev, target=Ads, pen=Content, mail=Email, star=Brand, cart=Ecom"
+                  - { label: "Service Name", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    options: ["purple", "cyan", "pink", "orange", "green", "blue", "red", "yellow"]
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Title (first part)", name: "title", widget: "string" }
+              - { label: "Title (gradient part)", name: "title_accent", widget: "string" }
+              - { label: "Description Paragraph", name: "description", widget: "text" }
+              - label: "Feature Bullet Points"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "item", widget: "string" }
+              - { label: "Button Text", name: "cta", widget: "string" }
+              - { label: "Highlight 1 (e.g. 500+ Projects)", name: "highlight_1", widget: "string" }
+              - { label: "Highlight 2 (e.g. 300+ Clients)", name: "highlight_2", widget: "string" }
+              - { label: "Highlight 3 (e.g. 8+ Years)", name: "highlight_3", widget: "string" }
+          - label: "How We Work (Process)"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Step Number", name: "number", widget: "string", hint: "e.g. 01" }
+                  - { label: "Step Title", name: "title", widget: "string" }
+                  - { label: "Step Description", name: "description", widget: "text" }
+          - label: "Testimonials / Reviews"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - label: "Client Reviews"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Client Name", name: "name", widget: "string" }
+                  - { label: "Role / Company", name: "role", widget: "string" }
+                  - { label: "Review Text", name: "review", widget: "text" }
+                  - { label: "Rating (1-5)", name: "rating", widget: "number", min: 1, max: 5, default: 5 }
+                  - { label: "Avatar Initials (2 letters)", name: "avatar_initials", widget: "string", hint: "e.g. RS for Rajesh Sharma" }
+          - label: "Pricing Packages"
+            name: "packages"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Currency Symbol", name: "currency", widget: "string", default: "₹" }
+              - label: "Packages"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Package Name", name: "name", widget: "string" }
+                  - { label: "Price (number only, no symbol)", name: "price", widget: "string", hint: "e.g. 15,000" }
+                  - { label: "Period", name: "period", widget: "string", default: "month" }
+                  - { label: "Short Description", name: "description", widget: "string" }
+                  - { label: "Mark as Popular (highlights this card)", name: "popular", widget: "boolean", default: false }
+                  - label: "Features List"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "item", widget: "string" }
+                  - { label: "Button Text", name: "cta", widget: "string" }
+          - label: "CTA Banner"
+            name: "cta_banner"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Subtext", name: "subtitle", widget: "string" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Form Success Message", name: "form_success", widget: "string" }
+              - label: "Services in Contact Dropdown"
+                name: "services_list"
+                widget: "list"
+                field: { label: "Service Name", name: "item", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Short Description", name: "description", widget: "text" }
+              - { label: "Copyright Text (without ©)", name: "copyright", widget: "string" }

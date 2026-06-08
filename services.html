@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Syntech Digitals</title>
+  <meta name="description" content="Explore Syntech Digitals' full range of digital marketing services – SEO, Social Media, Web Development, Google Ads, E-Commerce and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--border); }
+    .service-detail-grid:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+    .service-detail-grid.reverse .sd-visual { order:-1; }
+    .sd-visual { background:linear-gradient(135deg,var(--blue-bg),var(--blue-light)); border-radius:var(--radius-xl); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; font-size:5rem; border:1px solid var(--blue-light); }
+    @media(max-width:768px){ .service-detail-grid { grid-template-columns:1fr; } .service-detail-grid.reverse .sd-visual { order:0; } }
+  </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <h1>Our Services</h1>
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Services</span></nav>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="section section-light" style="padding-bottom:40px">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Comprehensive Digital Marketing Services</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">From SEO to e-commerce, we provide everything you need to dominate the digital space and grow your business online.</p>
+    </div>
+    <div class="services-grid" style="margin-bottom:0">
+      <a href="#seo" class="service-card reveal" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <h3 class="svc-title">SEO</h3><p class="svc-desc">Rank higher on Google</p>
+      </a>
+      <a href="#social" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+        <h3 class="svc-title">Social Media</h3><p class="svc-desc">Build your brand online</p>
+      </a>
+      <a href="#web-dev" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3 class="svc-title">Web Development</h3><p class="svc-desc">Modern responsive websites</p>
+      </a>
+      <a href="#ads" class="service-card reveal" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3 class="svc-title">Google & Meta Ads</h3><p class="svc-desc">Paid advertising that converts</p>
+      </a>
+      <a href="#graphics" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3 class="svc-title">Graphics Designing</h3><p class="svc-desc">Creative visual identity</p>
+      </a>
+      <a href="#ecommerce" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h3 class="svc-title">E-Commerce</h3><p class="svc-desc">Sell more online</p>
+      </a>
+      <a href="#gmb" class="service-card reveal" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 class="svc-title">Google My Business</h3><p class="svc-desc">Dominate local search</p>
+      </a>
+      <a href="#sms-email" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h3 class="svc-title">SMS & Email Marketing</h3><p class="svc-desc">Direct customer outreach</p>
+      </a>
+      <a href="#hosting" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3 class="svc-title">Web Hosting & Domain</h3><p class="svc-desc">Reliable, fast hosting</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Services -->
+<section class="section section-alt">
+  <div class="container">
+
+    <!-- SEO -->
+    <div class="service-detail-grid" id="seo">
+      <div class="sd-content reveal">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <h2 class="sd-title">Search Engine Optimization (SEO)</h2>
+        <p class="sd-desc">Our comprehensive SEO services help your website rank higher on Google and other search engines, driving targeted organic traffic that converts. We use white-hat techniques and the latest SEO practices.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> On-Page & Technical SEO Audit</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Keyword Research & Strategy</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-Quality Link Building</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Content Optimization</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Monthly Ranking Reports</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get SEO Quote</a>
+      </div>
+      <div class="sd-visual reveal reveal-delay-1">🔍</div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="service-detail-grid reverse" id="social">
+      <div class="sd-visual reveal">📱</div>
+      <div class="sd-content reveal reveal-delay-1">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+        <h2 class="sd-title">Social Media Marketing</h2>
+        <p class="sd-desc">Build a powerful social media presence that engages your audience, builds brand loyalty, and drives business results. We manage Facebook, Instagram, LinkedIn, YouTube, and Twitter.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social Media Strategy & Calendar</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Creative Post Design & Copywriting</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Community Management</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Influencer Marketing</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Performance Analytics</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get SMM Quote</a>
+      </div>
+    </div>
+
+    <!-- Web Dev -->
+    <div class="service-detail-grid" id="web-dev">
+      <div class="sd-content reveal">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h2 class="sd-title">Website Development</h2>
+        <p class="sd-desc">We design and develop modern, fast, mobile-responsive websites that look great, load fast, and convert visitors into customers. From simple landing pages to complex web applications.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom Design (No Templates)</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mobile-First Responsive Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> SEO-Optimised Structure</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fast Loading Speed</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> CMS Integration (WordPress/Custom)</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Web Dev Quote</a>
+      </div>
+      <div class="sd-visual reveal reveal-delay-1">💻</div>
+    </div>
+
+    <!-- Ads -->
+    <div class="service-detail-grid reverse" id="ads">
+      <div class="sd-visual reveal">🎯</div>
+      <div class="sd-content reveal reveal-delay-1">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h2 class="sd-title">Google & Meta Ads</h2>
+        <p class="sd-desc">Maximize your advertising ROI with expertly managed Google Ads (Search, Display, YouTube) and Meta Ads (Facebook & Instagram). We make every rupee count.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Campaign Setup & Strategy</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Audience Targeting & Retargeting</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ad Copywriting & Creative Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Bid Optimization & Budget Management</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Conversion Tracking & Reporting</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Ads Quote</a>
+      </div>
+    </div>
+
+    <!-- Graphics -->
+    <div class="service-detail-grid" id="graphics">
+      <div class="sd-content reveal">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h2 class="sd-title">Graphics Designing</h2>
+        <p class="sd-desc">Creative, professional graphic designs that make your brand stand out. From logo design to social media creatives, we bring your brand identity to life visually.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Logo & Brand Identity Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social Media Post Designs</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Banner & Poster Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Brochure & Flyer Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Digital Business Card</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Design Quote</a>
+      </div>
+      <div class="sd-visual reveal reveal-delay-1">🎨</div>
+    </div>
+
+    <!-- E-Commerce -->
+    <div class="service-detail-grid reverse" id="ecommerce">
+      <div class="sd-visual reveal">🛒</div>
+      <div class="sd-content reveal reveal-delay-1">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h2 class="sd-title">E-Commerce Solutions</h2>
+        <p class="sd-desc">Build a powerful online store that sells 24/7. We create feature-rich e-commerce websites on WooCommerce, Shopify, and custom platforms tailored to your business needs.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> WooCommerce / Shopify Development</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Payment Gateway Integration</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Product Catalogue Management</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> E-Commerce SEO & Marketing</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Order & Inventory Management</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get E-Commerce Quote</a>
+      </div>
+    </div>
+
+    <!-- GMB -->
+    <div class="service-detail-grid" id="gmb">
+      <div class="sd-content reveal">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h2 class="sd-title">Google My Business</h2>
+        <p class="sd-desc">Dominate local search results and attract nearby customers with optimised Google My Business listing management. Show up when customers search for businesses like yours near them.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> GMB Profile Setup & Optimisation</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Regular Post Publishing</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Review Management</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Local SEO Integration</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Google Maps Optimisation</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get GMB Quote</a>
+      </div>
+      <div class="sd-visual reveal reveal-delay-1">📍</div>
+    </div>
+
+    <!-- SMS & Email -->
+    <div class="service-detail-grid reverse" id="sms-email">
+      <div class="sd-visual reveal">📧</div>
+      <div class="sd-content reveal reveal-delay-1">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h2 class="sd-title">SMS & Email Marketing</h2>
+        <p class="sd-desc">Reach your customers directly in their inbox and phone with targeted SMS and email campaigns that drive repeat business, nurture leads, and boost customer retention.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Bulk SMS Campaigns</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Email Newsletter Design</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated Email Sequences</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> List Segmentation & Management</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Open Rate & Click Tracking</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Email Marketing Quote</a>
+      </div>
+    </div>
+
+    <!-- Hosting -->
+    <div class="service-detail-grid" id="hosting">
+      <div class="sd-content reveal">
+        <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h2 class="sd-title">Web Hosting & Domain Registration</h2>
+        <p class="sd-desc">Reliable, fast, and secure web hosting solutions with 99.9% uptime guarantee. We handle domain registration, SSL certificates, and all technical aspects of keeping your site online.</p>
+        <ul class="sd-features">
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Shared, VPS & Dedicated Hosting</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Domain Registration & Transfer</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free SSL Certificate</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Daily Backups</li>
+          <li class="sd-feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Technical Support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Hosting Quote</a>
+      </div>
+      <div class="sd-visual reveal reveal-delay-1">🌐</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Not Sure Which Service You Need?</h2>
+      <p>Talk to our experts for free. We'll recommend the best strategy based on your business goals and budget.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-orange btn-lg">Get Free Consultation</a>
+        <a href="packages.html" class="btn btn-outline-white btn-lg">View Packages & Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+</body>
+</html>
