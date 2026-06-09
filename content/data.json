@@ -1,30 +1,18 @@
 {
-  "site": {
-    "name": "Syntech Digitals",
-    "tagline": "Digital Marketing Agency",
-    "phone": "+91 98765 43210",
-    "email": "hello@syntechdigitals.com",
-    "address": "Mumbai, Maharashtra, India",
-    "whatsapp": "919876543210",
-    "social_fb": "#",
-    "social_tw": "#",
-    "social_li": "#",
-    "social_ig": "#"
-  },
-  "nav": {
-    "cta_text": "Get Started"
-  },
-  "hero": {
-    "badge": "India's Top Rated Digital Agency",
-    "headline": "Grow Your Brand",
-    "headline_accent": "Digitally",
-    "subtext": "We help businesses scale online with data-driven marketing strategies, creative content, and cutting-edge technology that delivers real, measurable results.",
-    "cta_primary": "Get Free Consultation",
-    "cta_secondary": "View Our Work",
-    "mini_stats": [
-      { "number": "500+", "label": "Projects" },
-      { "number": "300+", "label": "Clients" },
-      { "number": "8+", "label": "Years" }
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's Work Together",
+    "subtitle": "Ready to grow your brand digitally? Get a free consultation with our experts today.",
+    "form_success": "Thank you! We'll get back to you within 24 hours.",
+    "services_list": [
+      "SEO",
+      "Social Media Marketing",
+      "Website Development",
+      "Google & Meta Ads",
+      "Content Marketing",
+      "Email Marketing",
+      "Branding & Design",
+      "E-commerce Solutions"
     ]
   },
   "marquee": [
@@ -39,82 +27,94 @@
     "Performance Analytics",
     "Video Marketing"
   ],
-  "stats": [
-    { "number": "500", "suffix": "+", "label": "Projects Delivered" },
-    { "number": "300", "suffix": "+", "label": "Happy Clients" },
-    { "number": "8", "suffix": "+", "label": "Years Experience" },
-    { "number": "15", "suffix": "+", "label": "Expert Team Members" }
-  ],
-  "services": {
-    "badge": "What We Do",
-    "title": "Our Services",
-    "subtitle": "Everything you need to dominate the digital space and outrank your competition.",
+  "nav": {
+    "cta_text": "Get Started"
+  },
+  "site": {
+    "name": "Syntech Digitals",
+    "phone": "+91 98765 43210",
+    "tagline": "Digital Marketing Agency",
+    "social_fb": "#",
+    "social_li": "#",
+    "social_ig": "#",
+    "whatsapp": "919876543210",
+    "address": "Mumbai, Maharashtra, India",
+    "social_tw": "#",
+    "email": "info@syntechdigitals.com"
+  },
+  "packages": {
+    "badge": "Pricing",
+    "title": "Transparent Pricing",
+    "subtitle": "No hidden fees, no surprises. Just results that grow your business.",
+    "currency": "₹",
     "items": [
       {
-        "icon": "search",
-        "title": "Search Engine Optimization",
-        "description": "Rank higher on Google with proven SEO strategies. Drive organic traffic and grow your business sustainably.",
-        "color": "purple"
+        "name": "Starter",
+        "price": "15,000",
+        "period": "month",
+        "description": "Perfect for small businesses getting started with digital marketing.",
+        "popular": false,
+        "features": [
+          "SEO Optimization (5 keywords)",
+          "Social Media (2 platforms)",
+          "Monthly Performance Report",
+          "Email Support",
+          "1 Blog Post/Month"
+        ],
+        "cta": "Get Started"
       },
       {
-        "icon": "share",
-        "title": "Social Media Marketing",
-        "description": "Build a powerful social presence. Engage your audience and convert followers into loyal customers.",
-        "color": "cyan"
+        "name": "Growth",
+        "price": "35,000",
+        "period": "month",
+        "description": "For growing businesses ready to scale their digital presence.",
+        "popular": true,
+        "features": [
+          "SEO Optimization (15 keywords)",
+          "Social Media (4 platforms)",
+          "Google Ads Management",
+          "Weekly Performance Report",
+          "4 Blog Posts/Month",
+          "Dedicated Account Manager",
+          "Email + WhatsApp Support"
+        ],
+        "cta": "Most Popular"
       },
       {
-        "icon": "code",
-        "title": "Website Development",
-        "description": "Modern, fast, and responsive websites that convert visitors into clients. Custom designs built for performance.",
-        "color": "pink"
-      },
-      {
-        "icon": "target",
-        "title": "Google & Meta Ads",
-        "description": "Maximize ROI with targeted paid advertising. Data-driven campaigns that deliver measurable results.",
-        "color": "orange"
-      },
-      {
-        "icon": "pen",
-        "title": "Content Marketing",
-        "description": "Compelling content that tells your brand story. Blogs, videos, and creatives that attract and retain customers.",
-        "color": "green"
-      },
-      {
-        "icon": "mail",
-        "title": "Email Marketing",
-        "description": "Automated email campaigns that nurture leads and boost conversions with high open rates.",
-        "color": "blue"
-      },
-      {
-        "icon": "star",
-        "title": "Branding & Design",
-        "description": "Create a memorable brand identity. Logos, brand guidelines, and visual assets that stand out.",
-        "color": "red"
-      },
-      {
-        "icon": "cart",
-        "title": "E-commerce Solutions",
-        "description": "Build and grow your online store. From setup to optimization, we handle everything end-to-end.",
-        "color": "yellow"
+        "name": "Enterprise",
+        "price": "75,000",
+        "period": "month",
+        "description": "Full-service digital marketing for established businesses.",
+        "popular": false,
+        "features": [
+          "SEO Optimization (Unlimited)",
+          "All Social Media Platforms",
+          "Google + Meta Ads",
+          "Content Creation (Videos + Blogs)",
+          "Daily Performance Reports",
+          "Dedicated Expert Team",
+          "24/7 Priority Support",
+          "Monthly Strategy Sessions"
+        ],
+        "cta": "Contact Us"
       }
     ]
   },
   "about": {
     "badge": "About Us",
-    "title": "We're a Team of",
+    "highlight_1": "500+ Projects",
+    "highlight_2": "300+ Clients",
+    "highlight_3": "8+ Years",
+    "cta": "Learn More About Us",
     "title_accent": "Digital Experts",
+    "title": "We're a Team of",
     "description": "Founded with a passion for digital growth, we've helped 300+ businesses transform their online presence. Our data-driven approach combines creativity with strategy to deliver real, measurable results that matter to your bottom line.",
     "features": [
       "Data-driven strategies that consistently deliver ROI",
       "Dedicated account manager for every client",
       "Transparent reporting and real-time analytics",
       "Proven track record across 20+ industries"
-    ],
-    "cta": "Learn More About Us",
-    "highlight_1": "500+ Projects",
-    "highlight_2": "300+ Clients",
-    "highlight_3": "8+ Years"
+    ]
   },
   "process": {
     "title": "How We Work",
@@ -177,78 +177,26 @@
       }
     ]
   },
-  "packages": {
-    "badge": "Pricing",
-    "title": "Transparent Pricing",
-    "subtitle": "No hidden fees, no surprises. Just results that grow your business.",
-    "currency": "₹",
-    "items": [
+  "hero": {
+    "badge": "India's Top Rated Digital Agency",
+    "headline": "Grow Your Brand",
+    "headline_accent": "Digitally",
+    "subtext": "We help businesses scale online with data-driven marketing strategies, creative content, and cutting-edge technology that delivers real, measurable results.",
+    "cta_primary": "Get Free Consultation",
+    "cta_secondary": "View Our Work",
+    "mini_stats": [
       {
-        "name": "Starter",
-        "price": "15,000",
-        "period": "month",
-        "description": "Perfect for small businesses getting started with digital marketing.",
-        "popular": false,
-        "features": [
-          "SEO Optimization (5 keywords)",
-          "Social Media (2 platforms)",
-          "Monthly Performance Report",
-          "Email Support",
-          "1 Blog Post/Month"
-        ],
-        "cta": "Get Started"
+        "number": "500+",
+        "label": "Projects"
       },
       {
-        "name": "Growth",
-        "price": "35,000",
-        "period": "month",
-        "description": "For growing businesses ready to scale their digital presence.",
-        "popular": true,
-        "features": [
-          "SEO Optimization (15 keywords)",
-          "Social Media (4 platforms)",
-          "Google Ads Management",
-          "Weekly Performance Report",
-          "4 Blog Posts/Month",
-          "Dedicated Account Manager",
-          "Email + WhatsApp Support"
-        ],
-        "cta": "Most Popular"
+        "number": "300+",
+        "label": "Clients"
       },
       {
-        "name": "Enterprise",
-        "price": "75,000",
-        "period": "month",
-        "description": "Full-service digital marketing for established businesses.",
-        "popular": false,
-        "features": [
-          "SEO Optimization (Unlimited)",
-          "All Social Media Platforms",
-          "Google + Meta Ads",
-          "Content Creation (Videos + Blogs)",
-          "Daily Performance Reports",
-          "Dedicated Expert Team",
-          "24/7 Priority Support",
-          "Monthly Strategy Sessions"
-        ],
-        "cta": "Contact Us"
+        "number": "8+",
+        "label": "Years"
       }
-    ]
-  },
-  "contact": {
-    "badge": "Contact",
-    "title": "Let's Work Together",
-    "subtitle": "Ready to grow your brand digitally? Get a free consultation with our experts today.",
-    "form_success": "Thank you! We'll get back to you within 24 hours.",
-    "services_list": [
-      "SEO",
-      "Social Media Marketing",
-      "Website Development",
-      "Google & Meta Ads",
-      "Content Marketing",
-      "Email Marketing",
-      "Branding & Design",
-      "E-commerce Solutions"
     ]
   },
   "cta_banner": {
@@ -259,5 +207,82 @@
   "footer": {
     "description": "India's leading digital marketing agency helping businesses grow online since 2016. Data-driven strategies, real results.",
     "copyright": "2024 Syntech Digitals. All rights reserved."
-  }
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Our Services",
+    "subtitle": "Everything you need to dominate the digital space and outrank your competition.",
+    "items": [
+      {
+        "icon": "search",
+        "title": "Search Engine Optimization",
+        "description": "Rank higher on Google with proven SEO strategies. Drive organic traffic and grow your business sustainably.",
+        "color": "purple"
+      },
+      {
+        "icon": "share",
+        "title": "Social Media Marketing",
+        "description": "Build a powerful social presence. Engage your audience and convert followers into loyal customers.",
+        "color": "cyan"
+      },
+      {
+        "icon": "code",
+        "title": "Website Development",
+        "description": "Modern, fast, and responsive websites that convert visitors into clients. Custom designs built for performance.",
+        "color": "pink"
+      },
+      {
+        "icon": "target",
+        "title": "Google & Meta Ads",
+        "description": "Maximize ROI with targeted paid advertising. Data-driven campaigns that deliver measurable results.",
+        "color": "orange"
+      },
+      {
+        "icon": "pen",
+        "title": "Content Marketing",
+        "description": "Compelling content that tells your brand story. Blogs, videos, and creatives that attract and retain customers.",
+        "color": "green"
+      },
+      {
+        "icon": "mail",
+        "title": "Email Marketing",
+        "description": "Automated email campaigns that nurture leads and boost conversions with high open rates.",
+        "color": "blue"
+      },
+      {
+        "icon": "star",
+        "title": "Branding & Design",
+        "description": "Create a memorable brand identity. Logos, brand guidelines, and visual assets that stand out.",
+        "color": "red"
+      },
+      {
+        "icon": "cart",
+        "title": "E-commerce Solutions",
+        "description": "Build and grow your online store. From setup to optimization, we handle everything end-to-end.",
+        "color": "yellow"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "number": "500",
+      "suffix": "+",
+      "label": "Projects Delivered"
+    },
+    {
+      "number": "300",
+      "suffix": "+",
+      "label": "Happy Clients"
+    },
+    {
+      "number": "8",
+      "suffix": "+",
+      "label": "Years Experience"
+    },
+    {
+      "number": "15",
+      "suffix": "+",
+      "label": "Expert Team Members"
+    }
+  ]
 }
