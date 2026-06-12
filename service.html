@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service | Syntech Digitals</title>
+  <meta name="description" content="Syntech Digitals digital marketing service details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .svc-hero{background:linear-gradient(135deg,var(--blue-dark),var(--blue));padding:80px 0 60px;color:#fff;text-align:center}
+    .svc-hero .svc-emoji{font-size:4rem;margin-bottom:16px;display:block}
+    .svc-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px}
+    .svc-hero p{font-size:1.05rem;opacity:.88;max-width:620px;margin:0 auto 28px;line-height:1.7}
+    .svc-hero .breadcrumb{justify-content:center;opacity:.7}
+    .svc-hero .breadcrumb a{color:#fff}
+    .svc-hero .breadcrumb span{color:#fff}
+
+    .svc-detail-layout{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:start;padding:60px 0}
+    @media(max-width:900px){.svc-detail-layout{grid-template-columns:1fr;gap:32px}}
+
+    .svc-features-list{list-style:none;margin:24px 0 32px}
+    .svc-features-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:.93rem}
+    .svc-features-list li:last-child{border-bottom:none}
+    .svc-features-list .chk{width:22px;height:22px;background:var(--blue-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .svc-features-list .chk svg{width:12px;height:12px;stroke:var(--blue);stroke-width:3}
+
+    /* Visual mockup card */
+    .svc-visual-wrap{position:sticky;top:90px}
+    .svc-mockup{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.2)}
+    .sm-hd{padding:16px 20px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.92rem;color:#fff}
+    .sm-body{background:#fff;padding:20px}
+    .sm-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+    .sm-ben{text-align:center;padding:14px 8px;background:#f8fafc;border-radius:12px;border:1px solid var(--border)}
+    .sm-ben .bico{font-size:1.4rem;margin-bottom:6px}
+    .sm-ben .bval{font-size:1.3rem;font-weight:800;color:var(--blue-dark);line-height:1}
+    .sm-ben .blbl{font-size:.72rem;color:var(--text-muted);margin-top:3px}
+    .sm-bars{background:#f8fafc;border-radius:12px;padding:14px;border:1px solid var(--border)}
+    .sm-bar-title{font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+    .sm-bar-row{display:grid;grid-template-columns:90px 1fr 36px;gap:8px;align-items:center;margin-bottom:7px}
+    .sm-bar-row:last-child{margin-bottom:0}
+    .sm-bar-lbl{font-size:.77rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .sm-track{height:7px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+    .sm-fill{height:100%;border-radius:4px;transition:width .8s ease}
+    .sm-pct{font-size:.75rem;font-weight:700;text-align:right;color:var(--text-muted)}
+    .sm-cta{margin-top:16px;display:block;width:100%;padding:12px;border-radius:10px;font-weight:700;font-size:.9rem;text-align:center;cursor:pointer;border:none;font-family:inherit;transition:.15s}
+
+    /* Other services */
+    .other-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:32px}
+    .os-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 12px;background:#fff;border:1.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:.15s;text-align:center}
+    .os-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,86,219,.1)}
+    .os-card .os-em{font-size:1.8rem}
+    .os-card .os-nm{font-size:.8rem;font-weight:600;color:var(--blue-dark)}
+
+    /* Breadcrumb */
+    .breadcrumb{display:flex;align-items:center;gap:6px;font-size:.82rem;margin-top:10px;flex-wrap:wrap}
+    .breadcrumb a{color:var(--blue);text-decoration:none}
+    .breadcrumb .sep{color:var(--text-muted)}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<!-- Dynamic hero - filled by JS -->
+<div id="svc-hero-placeholder"></div>
+
+<!-- Main content -->
+<section class="section section-light" style="padding-top:0">
+  <div class="container">
+    <div class="svc-detail-layout" id="svc-layout">
+      <!-- Left: description + features -->
+      <div>
+        <span class="section-label" id="svc-badge">Our Service</span>
+        <h2 class="section-title" id="svc-heading" style="margin-top:8px"></h2>
+        <div class="section-divider"></div>
+        <p id="svc-desc" style="color:var(--text-muted);line-height:1.8;font-size:.95rem;margin-bottom:4px"></p>
+        <ul class="svc-features-list" id="svc-features"></ul>
+        <a id="svc-cta" href="contact.html" class="btn btn-blue btn-lg">Get Quote</a>
+      </div>
+      <!-- Right: visual mockup -->
+      <div class="svc-visual-wrap">
+        <div class="svc-mockup" id="svc-mockup">
+          <div class="sm-hd" id="sm-hd"></div>
+          <div class="sm-body">
+            <div class="sm-benefits" id="sm-benefits"></div>
+            <div class="sm-bars" id="sm-bars"></div>
+            <a id="sm-cta-btn" href="contact.html" class="sm-cta">Request Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Other services -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="section-label">Explore More</span>
+      <h2 class="section-title">Our Other Services</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="other-services" id="other-services"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to Get Started?</h2>
+      <p>Talk to our experts for a free consultation — no commitment required.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-orange btn-lg">Get Free Consultation</a>
+        <a href="packages.html" class="btn btn-outline-white btn-lg">View Packages</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script>
+const CHECK_SVG=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`;
+
+const BAR_SETS = {
+  seo:       [{lbl:'Keyword Rankings',pct:87,col:'#1a56db'},{lbl:'Domain Authority',pct:72,col:'#f97316'},{lbl:'Page Speed Score',pct:94,col:'#10b981'}],
+  smm:       [{lbl:'Engagement Rate',pct:82,col:'#7c3aed'},{lbl:'Reach Growth',pct:90,col:'#f97316'},{lbl:'Follower Growth',pct:78,col:'#1a56db'}],
+  webdev:    [{lbl:'Performance Score',pct:96,col:'#0891b2'},{lbl:'SEO Score',pct:92,col:'#1a56db'},{lbl:'Mobile Score',pct:98,col:'#10b981'}],
+  ads:       [{lbl:'Click-Through Rate',pct:74,col:'#dc2626'},{lbl:'Conversion Rate',pct:68,col:'#f97316'},{lbl:'ROAS Achievement',pct:89,col:'#10b981'}],
+  graphics:  [{lbl:'Brand Consistency',pct:95,col:'#d97706'},{lbl:'Client Satisfaction',pct:98,col:'#f97316'},{lbl:'On-Time Delivery',pct:100,col:'#10b981'}],
+  ecommerce: [{lbl:'Sales Growth',pct:85,col:'#059669'},{lbl:'Cart Conversion',pct:72,col:'#1a56db'},{lbl:'Return Customers',pct:68,col:'#f97316'}],
+  gmb:       [{lbl:'Local Search Rank',pct:91,col:'#16a34a'},{lbl:'Review Score',pct:96,col:'#f97316'},{lbl:'Call Conversions',pct:83,col:'#1a56db'}],
+  'sms-email':[{lbl:'Email Open Rate',pct:42,col:'#0284c7'},{lbl:'Click Rate',pct:35,col:'#1a56db'},{lbl:'List Growth',pct:78,col:'#10b981'}],
+  hosting:   [{lbl:'Uptime',pct:99.9,col:'#6366f1'},{lbl:'Page Speed',pct:96,col:'#1a56db'},{lbl:'Security Score',pct:100,col:'#10b981'}],
+};
+
+async function loadService() {
+  const id = new URLSearchParams(location.search).get('id') || 'seo';
+  const res = await fetch('content/services.json');
+  const all  = await res.json();
+  const s    = all[id];
+  if (!s) { document.title = 'Service Not Found | Syntech Digitals'; return; }
+
+  // Page title + meta
+  document.title = `${s.title} | Syntech Digitals`;
+
+  // Hero
+  document.getElementById('svc-hero-placeholder').innerHTML = `
+    <section class="svc-hero">
+      <div class="container">
+        <span class="svc-emoji">${s.emoji}</span>
+        <h1>${s.title}</h1>
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a><span class="sep">›</span>
+          <a href="services.html">Services</a><span class="sep">›</span>
+          <span>${s.short}</span>
+        </nav>
+      </div>
+    </section>`;
+
+  // Left column
+  document.getElementById('svc-badge').textContent = s.short;
+  document.getElementById('svc-heading').textContent = s.title;
+  document.getElementById('svc-desc').textContent   = s.description;
+  document.getElementById('svc-cta').textContent    = s.cta;
+
+  // Features
+  document.getElementById('svc-features').innerHTML = s.features.map(f=>`
+    <li><span class="chk">${CHECK_SVG}</span>${f}</li>`).join('');
+
+  // Mockup header
+  const hd = document.getElementById('sm-hd');
+  hd.style.background = s.color;
+  hd.innerHTML = `<span style="font-size:1.3rem">${s.emoji}</span> ${s.short} Performance`;
+
+  // Benefits
+  document.getElementById('sm-benefits').innerHTML = (s.benefits||[]).map(b=>`
+    <div class="sm-ben">
+      <div class="bico">${b.icon}</div>
+      <div class="bval">${b.val}</div>
+      <div class="blbl">${b.lbl}</div>
+    </div>`).join('');
+
+  // Bars
+  const bars = BAR_SETS[id] || BAR_SETS.seo;
+  document.getElementById('sm-bars').innerHTML = `
+    <div class="sm-bar-title">Key Metrics</div>
+    ${bars.map(b=>`
+      <div class="sm-bar-row">
+        <span class="sm-bar-lbl">${b.lbl}</span>
+        <div class="sm-track"><div class="sm-fill" style="width:${b.pct}%;background:${b.col}"></div></div>
+        <span class="sm-pct">${b.pct}%</span>
+      </div>`).join('')}`;
+
+  // CTA button color
+  const ctaBtn = document.getElementById('sm-cta-btn');
+  ctaBtn.style.background = s.color;
+  ctaBtn.style.color = '#fff';
+
+  // Other services
+  document.getElementById('other-services').innerHTML = Object.values(all)
+    .filter(sv=>sv.id!==id)
+    .map(sv=>`<a href="service.html?id=${sv.id}" class="os-card">
+      <span class="os-em">${sv.emoji}</span>
+      <span class="os-nm">${sv.short}</span>
+    </a>`).join('');
+}
+
+loadService().catch(e=>console.error(e));
+</script>
+</body>
+</html>

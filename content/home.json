@@ -9,22 +9,22 @@
     "cta_secondary_link": "portfolio.html"
   },
   "stats": [
-    { "icon": "🚀", "number": "500", "suffix": "+", "label": "Projects Delivered" },
-    { "icon": "😊", "number": "300", "suffix": "+", "label": "Happy Clients" },
-    { "icon": "⭐", "number": "8",   "suffix": "+", "label": "Years Experience" },
-    { "icon": "👨‍💻", "number": "15",  "suffix": "+", "label": "Expert Team Members" }
+    { "icon": "🚀", "number": "100", "suffix": "+", "label": "Projects Delivered" },
+    { "icon": "😊", "number": "85",  "suffix": "+", "label": "Happy Clients" },
+    { "icon": "⭐", "number": "2",   "suffix": "+", "label": "Years Experience" },
+    { "icon": "📅", "number": "2024","suffix": "",  "label": "Founded In" }
   ],
   "about_brief": {
     "badge": "About Syntech Digitals",
     "headline": "We Turn Your Vision Into Digital Success",
-    "text": "Founded with a passion for digital growth, Syntech Digitals has helped 300+ businesses transform their online presence. Our team of experts combines creativity with data-driven strategy to deliver measurable results that impact your bottom line.",
-    "years_number": "8+",
+    "text": "Founded in 2024 with a passion for digital growth, Syntech Digitals has helped 85+ businesses transform their online presence. Our team of experts combines creativity with data-driven strategy to deliver measurable results that impact your bottom line.",
+    "years_number": "2+",
     "years_label": "Years of Excellence",
     "features": [
       "Certified Google & Meta Ads professionals",
       "Transparent monthly reporting with real ROI data",
       "Dedicated account manager for every client",
-      "Proven track record across 20+ industries"
+      "Proven track record across 10+ industries"
     ],
     "cta": "Know More About Us"
   },

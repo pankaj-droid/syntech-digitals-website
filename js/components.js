@@ -60,15 +60,15 @@ function buildHeader(data) {
           <li class="nav-item">
             <a href="services.html" class="nav-link ${isActive('services.html')}">Services ${SVG.chevron}</a>
             <ul class="dropdown">
-              <li><a href="services.html#web-dev">${SVG.arrowr} Website Development</a></li>
-              <li><a href="services.html#seo">${SVG.arrowr} Search Engine Optimization</a></li>
-              <li><a href="services.html#gmb">${SVG.arrowr} Google My Business</a></li>
-              <li><a href="services.html#social">${SVG.arrowr} Social Media Marketing</a></li>
-              <li><a href="services.html#sms-email">${SVG.arrowr} SMS & Email Marketing</a></li>
-              <li><a href="services.html#graphics">${SVG.arrowr} Graphics Designing</a></li>
-              <li><a href="services.html#ads">${SVG.arrowr} Advertising Solutions</a></li>
-              <li><a href="services.html#ecommerce">${SVG.arrowr} E-Commerce Website</a></li>
-              <li><a href="services.html#hosting">${SVG.arrowr} Web Hosting & Domain</a></li>
+              <li><a href="service.html?id=webdev">${SVG.arrowr} Website Development</a></li>
+              <li><a href="service.html?id=seo">${SVG.arrowr} Search Engine Optimization</a></li>
+              <li><a href="service.html?id=gmb">${SVG.arrowr} Google My Business</a></li>
+              <li><a href="service.html?id=smm">${SVG.arrowr} Social Media Marketing</a></li>
+              <li><a href="service.html?id=sms-email">${SVG.arrowr} SMS & Email Marketing</a></li>
+              <li><a href="service.html?id=graphics">${SVG.arrowr} Graphics Designing</a></li>
+              <li><a href="service.html?id=ads">${SVG.arrowr} Advertising Solutions</a></li>
+              <li><a href="service.html?id=ecommerce">${SVG.arrowr} E-Commerce Website</a></li>
+              <li><a href="service.html?id=hosting">${SVG.arrowr} Web Hosting & Domain</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="portfolio.html" class="nav-link ${isActive('portfolio.html')}">Portfolio</a></li>

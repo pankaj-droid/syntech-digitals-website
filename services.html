@@ -13,8 +13,25 @@
     .service-detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--border); }
     .service-detail-grid:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
     .service-detail-grid.reverse .sd-visual { order:-1; }
-    .sd-visual { background:linear-gradient(135deg,var(--blue-bg),var(--blue-light)); border-radius:var(--radius-xl); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; font-size:5rem; border:1px solid var(--blue-light); }
     @media(max-width:768px){ .service-detail-grid { grid-template-columns:1fr; } .service-detail-grid.reverse .sd-visual { order:0; } }
+
+    /* Rich visual mockup cards */
+    .svc-mock { border-radius:18px; overflow:hidden; box-shadow:0 16px 48px rgba(0,0,0,.12); border:1px solid rgba(255,255,255,.15); }
+    .svc-mock-hd { padding:14px 18px; color:#fff; font-weight:700; font-size:.88rem; display:flex; align-items:center; gap:8px; }
+    .svc-mock-body { background:#fff; padding:18px; }
+    .mock-kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:14px; }
+    .mock-kpi { text-align:center; padding:12px 6px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0; }
+    .mock-kpi .kval { font-size:1.2rem; font-weight:800; color:#1e293b; line-height:1; }
+    .mock-kpi .klbl { font-size:.68rem; color:#64748b; margin-top:3px; }
+    .mock-bars { background:#f8fafc; border-radius:10px; padding:12px; border:1px solid #e2e8f0; }
+    .mock-bar-ttl { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#94a3b8; margin-bottom:9px; }
+    .mbr { display:grid; grid-template-columns:90px 1fr 38px; gap:7px; align-items:center; margin-bottom:6px; }
+    .mbr:last-child { margin-bottom:0; }
+    .mbr .lbl { font-size:.73rem; color:#64748b; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .mbr .track { height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden; }
+    .mbr .fill { height:100%; border-radius:3px; }
+    .mbr .pct { font-size:.72rem; font-weight:700; color:#94a3b8; text-align:right; }
+    .mock-tag { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border-radius:20px; font-size:.72rem; font-weight:700; margin-bottom:10px; }
   </style>
 </head>
 <body>
@@ -40,39 +57,39 @@
       <p class="section-sub">From SEO to e-commerce, we provide everything you need to dominate the digital space and grow your business online.</p>
     </div>
     <div class="services-grid" style="margin-bottom:0">
-      <a href="#seo" class="service-card reveal" style="cursor:pointer">
+      <a href="service.html?id=seo" class="service-card reveal" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
         <h3 class="svc-title">SEO</h3><p class="svc-desc">Rank higher on Google</p>
       </a>
-      <a href="#social" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+      <a href="service.html?id=smm" class="service-card reveal reveal-delay-1" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         <h3 class="svc-title">Social Media</h3><p class="svc-desc">Build your brand online</p>
       </a>
-      <a href="#web-dev" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+      <a href="service.html?id=webdev" class="service-card reveal reveal-delay-2" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <h3 class="svc-title">Web Development</h3><p class="svc-desc">Modern responsive websites</p>
       </a>
-      <a href="#ads" class="service-card reveal" style="cursor:pointer">
+      <a href="service.html?id=ads" class="service-card reveal" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h3 class="svc-title">Google & Meta Ads</h3><p class="svc-desc">Paid advertising that converts</p>
       </a>
-      <a href="#graphics" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+      <a href="service.html?id=graphics" class="service-card reveal reveal-delay-1" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3 class="svc-title">Graphics Designing</h3><p class="svc-desc">Creative visual identity</p>
       </a>
-      <a href="#ecommerce" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+      <a href="service.html?id=ecommerce" class="service-card reveal reveal-delay-2" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
         <h3 class="svc-title">E-Commerce</h3><p class="svc-desc">Sell more online</p>
       </a>
-      <a href="#gmb" class="service-card reveal" style="cursor:pointer">
+      <a href="service.html?id=gmb" class="service-card reveal" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <h3 class="svc-title">Google My Business</h3><p class="svc-desc">Dominate local search</p>
       </a>
-      <a href="#sms-email" class="service-card reveal reveal-delay-1" style="cursor:pointer">
+      <a href="service.html?id=sms-email" class="service-card reveal reveal-delay-1" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <h3 class="svc-title">SMS & Email Marketing</h3><p class="svc-desc">Direct customer outreach</p>
       </a>
-      <a href="#hosting" class="service-card reveal reveal-delay-2" style="cursor:pointer">
+      <a href="service.html?id=hosting" class="service-card reveal reveal-delay-2" style="cursor:pointer">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
         <h3 class="svc-title">Web Hosting & Domain</h3><p class="svc-desc">Reliable, fast hosting</p>
       </a>
@@ -99,12 +116,46 @@
         </ul>
         <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get SEO Quote</a>
       </div>
-      <div class="sd-visual reveal reveal-delay-1">🔍</div>
+      <div class="sd-visual reveal reveal-delay-1">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#1a56db">🔍 SEO Performance Dashboard</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#1a56db">+240%</div><div class="klbl">Organic Traffic</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">#1</div><div class="klbl">Google Rank</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">5x</div><div class="klbl">More Leads</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Keyword Rankings</div>
+              <div class="mbr"><span class="lbl">Page 1 Keywords</span><div class="track"><div class="fill" style="width:87%;background:#1a56db"></div></div><span class="pct">87%</span></div>
+              <div class="mbr"><span class="lbl">Domain Authority</span><div class="track"><div class="fill" style="width:72%;background:#f97316"></div></div><span class="pct">DA72</span></div>
+              <div class="mbr"><span class="lbl">Page Speed</span><div class="track"><div class="fill" style="width:95%;background:#10b981"></div></div><span class="pct">95/100</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Social Media -->
     <div class="service-detail-grid reverse" id="social">
-      <div class="sd-visual reveal">📱</div>
+      <div class="sd-visual reveal">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#7c3aed">📱 Social Media Analytics</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#7c3aed">3x</div><div class="klbl">Follower Growth</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">+300%</div><div class="klbl">Engagement</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">80K+</div><div class="klbl">Monthly Reach</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Platform Performance</div>
+              <div class="mbr"><span class="lbl">Instagram</span><div class="track"><div class="fill" style="width:92%;background:#e1306c"></div></div><span class="pct">92%</span></div>
+              <div class="mbr"><span class="lbl">Facebook</span><div class="track"><div class="fill" style="width:78%;background:#1877f2"></div></div><span class="pct">78%</span></div>
+              <div class="mbr"><span class="lbl">LinkedIn</span><div class="track"><div class="fill" style="width:65%;background:#0a66c2"></div></div><span class="pct">65%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sd-content reveal reveal-delay-1">
         <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         <h2 class="sd-title">Social Media Marketing</h2>
@@ -135,12 +186,46 @@
         </ul>
         <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Web Dev Quote</a>
       </div>
-      <div class="sd-visual reveal reveal-delay-1">💻</div>
+      <div class="sd-visual reveal reveal-delay-1">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#0891b2">💻 Website Performance</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#0891b2">&lt;2s</div><div class="klbl">Load Time</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">100%</div><div class="klbl">Mobile Ready</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">+60%</div><div class="klbl">Conversions</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Google Lighthouse Score</div>
+              <div class="mbr"><span class="lbl">Performance</span><div class="track"><div class="fill" style="width:96%;background:#10b981"></div></div><span class="pct">96</span></div>
+              <div class="mbr"><span class="lbl">Accessibility</span><div class="track"><div class="fill" style="width:98%;background:#0891b2"></div></div><span class="pct">98</span></div>
+              <div class="mbr"><span class="lbl">SEO Score</span><div class="track"><div class="fill" style="width:100%;background:#1a56db"></div></div><span class="pct">100</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Ads -->
     <div class="service-detail-grid reverse" id="ads">
-      <div class="sd-visual reveal">🎯</div>
+      <div class="sd-visual reveal">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#dc2626">🎯 Ads Performance</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#dc2626">5.2x</div><div class="klbl">ROAS</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">-40%</div><div class="klbl">Cost Per Lead</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">+180%</div><div class="klbl">Conversions</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Campaign Results</div>
+              <div class="mbr"><span class="lbl">Click-Through Rate</span><div class="track"><div class="fill" style="width:74%;background:#dc2626"></div></div><span class="pct">7.4%</span></div>
+              <div class="mbr"><span class="lbl">Quality Score</span><div class="track"><div class="fill" style="width:90%;background:#f97316"></div></div><span class="pct">9/10</span></div>
+              <div class="mbr"><span class="lbl">Conv. Rate</span><div class="track"><div class="fill" style="width:68%;background:#10b981"></div></div><span class="pct">6.8%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sd-content reveal reveal-delay-1">
         <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h2 class="sd-title">Google & Meta Ads</h2>
@@ -171,12 +256,46 @@
         </ul>
         <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Design Quote</a>
       </div>
-      <div class="sd-visual reveal reveal-delay-1">🎨</div>
+      <div class="sd-visual reveal reveal-delay-1">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#d97706">🎨 Design Portfolio</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#d97706">2x</div><div class="klbl">Brand Recall</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">48hr</div><div class="klbl">Turnaround</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#1a56db">∞</div><div class="klbl">Revisions</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Design Services</div>
+              <div class="mbr"><span class="lbl">Brand Identity</span><div class="track"><div class="fill" style="width:100%;background:#d97706"></div></div><span class="pct">✓</span></div>
+              <div class="mbr"><span class="lbl">Social Media Posts</span><div class="track"><div class="fill" style="width:100%;background:#f97316"></div></div><span class="pct">✓</span></div>
+              <div class="mbr"><span class="lbl">Banners & Flyers</span><div class="track"><div class="fill" style="width:100%;background:#10b981"></div></div><span class="pct">✓</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- E-Commerce -->
     <div class="service-detail-grid reverse" id="ecommerce">
-      <div class="sd-visual reveal">🛒</div>
+      <div class="sd-visual reveal">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#059669">🛒 E-Commerce Dashboard</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#059669">+180%</div><div class="klbl">Sales Growth</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#1a56db">₹3L</div><div class="klbl">Monthly Revenue</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">500+</div><div class="klbl">Orders/Month</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Store Performance</div>
+              <div class="mbr"><span class="lbl">Conversion Rate</span><div class="track"><div class="fill" style="width:72%;background:#059669"></div></div><span class="pct">7.2%</span></div>
+              <div class="mbr"><span class="lbl">Repeat Customers</span><div class="track"><div class="fill" style="width:68%;background:#1a56db"></div></div><span class="pct">68%</span></div>
+              <div class="mbr"><span class="lbl">Cart Recovery</span><div class="track"><div class="fill" style="width:55%;background:#f97316"></div></div><span class="pct">55%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sd-content reveal reveal-delay-1">
         <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
         <h2 class="sd-title">E-Commerce Solutions</h2>
@@ -207,12 +326,46 @@
         </ul>
         <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get GMB Quote</a>
       </div>
-      <div class="sd-visual reveal reveal-delay-1">📍</div>
+      <div class="sd-visual reveal reveal-delay-1">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#16a34a">📍 Google My Business</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#16a34a">#1</div><div class="klbl">Maps Ranking</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">+85%</div><div class="klbl">More Calls</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#1a56db">4.8★</div><div class="klbl">Avg Rating</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Local Search Visibility</div>
+              <div class="mbr"><span class="lbl">Local Pack Rank</span><div class="track"><div class="fill" style="width:95%;background:#16a34a"></div></div><span class="pct">Top 3</span></div>
+              <div class="mbr"><span class="lbl">Profile Views</span><div class="track"><div class="fill" style="width:82%;background:#f97316"></div></div><span class="pct">+82%</span></div>
+              <div class="mbr"><span class="lbl">Review Count</span><div class="track"><div class="fill" style="width:76%;background:#1a56db"></div></div><span class="pct">+76%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- SMS & Email -->
     <div class="service-detail-grid reverse" id="sms-email">
-      <div class="sd-visual reveal">📧</div>
+      <div class="sd-visual reveal">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#0284c7">📧 Email & SMS Results</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#0284c7">42%</div><div class="klbl">Open Rate</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">42x</div><div class="klbl">ROI</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">+60%</div><div class="klbl">Retention</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Campaign Performance</div>
+              <div class="mbr"><span class="lbl">Email Open Rate</span><div class="track"><div class="fill" style="width:42%;background:#0284c7"></div></div><span class="pct">42%</span></div>
+              <div class="mbr"><span class="lbl">SMS Delivery</span><div class="track"><div class="fill" style="width:98%;background:#10b981"></div></div><span class="pct">98%</span></div>
+              <div class="mbr"><span class="lbl">Click Rate</span><div class="track"><div class="fill" style="width:35%;background:#f97316"></div></div><span class="pct">35%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sd-content reveal reveal-delay-1">
         <div class="sd-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <h2 class="sd-title">SMS & Email Marketing</h2>
@@ -243,7 +396,24 @@
         </ul>
         <a href="contact.html" class="btn btn-blue" style="margin-top:20px">Get Hosting Quote</a>
       </div>
-      <div class="sd-visual reveal reveal-delay-1">🌐</div>
+      <div class="sd-visual reveal reveal-delay-1">
+        <div class="svc-mock">
+          <div class="svc-mock-hd" style="background:#6366f1">🌐 Hosting Dashboard</div>
+          <div class="svc-mock-body">
+            <div class="mock-kpis">
+              <div class="mock-kpi"><div class="kval" style="color:#6366f1">99.9%</div><div class="klbl">Uptime</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#10b981">Free</div><div class="klbl">SSL Cert</div></div>
+              <div class="mock-kpi"><div class="kval" style="color:#f97316">Daily</div><div class="klbl">Backups</div></div>
+            </div>
+            <div class="mock-bars">
+              <div class="mock-bar-ttl">Server Performance</div>
+              <div class="mbr"><span class="lbl">Uptime</span><div class="track"><div class="fill" style="width:99%;background:#6366f1"></div></div><span class="pct">99.9%</span></div>
+              <div class="mbr"><span class="lbl">Speed Score</span><div class="track"><div class="fill" style="width:96%;background:#10b981"></div></div><span class="pct">96/100</span></div>
+              <div class="mbr"><span class="lbl">Security</span><div class="track"><div class="fill" style="width:100%;background:#1a56db"></div></div><span class="pct">A+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
