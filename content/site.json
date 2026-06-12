@@ -1,15 +1,15 @@
 {
   "site": {
     "name": "Syntech Digitals",
-    "phone": "+91 8010345250",
     "tagline": "Digital Marketing Agency",
-    "social_fb": "https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw==",
-    "social_li": "https://www.linkedin.com/in/syntech-digitals-966777414?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    "social_ig": "https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw==",
-    "whatsapp": "918010345250",
+    "phone": "+91 8010345250",
+    "email": "syntechdigitals912@gmail.com",
     "address": "Mumbai, Maharashtra, India",
+    "whatsapp": "918010345250",
+    "social_fb": "https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw==",
     "social_tw": "#",
-    "email": "syntechdigitals912@gmail.com"
+    "social_li": "https://www.linkedin.com/in/syntech-digitals-966777414?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "social_ig": "https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw=="
   },
   "footer": {
     "description": "India's leading digital marketing agency helping businesses grow online since 2024. Data-driven strategies, real results.",
