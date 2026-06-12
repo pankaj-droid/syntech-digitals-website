@@ -77,9 +77,10 @@
       <!-- Form -->
       <div class="contact-form-box reveal reveal-delay-1">
         <h3>Send Us a Message</h3>
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <input name="bot-field" type="hidden">
+        <form id="contact-form">
+          <input type="hidden" name="_subject" value="New Inquiry – Syntech Digitals Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name *</label>
@@ -178,7 +179,12 @@
     const btn = this.querySelector('button[type="submit"]');
     btn.textContent = 'Sending...'; btn.disabled = true;
     try {
-      const r = await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(new FormData(this)).toString() });
+      const data = Object.fromEntries(new FormData(this).entries());
+      const r = await fetch('https://formsubmit.co/ajax/syntechdigitals912@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
       if (r.ok) {
         this.style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
