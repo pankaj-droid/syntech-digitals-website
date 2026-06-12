@@ -32,15 +32,15 @@
   },
   "site": {
     "name": "Syntech Digitals",
-    "phone": "+91 98765 43210",
+    "phone": "+91 8010345250",
     "tagline": "Digital Marketing Agency",
     "social_fb": "#",
     "social_li": "#",
     "social_ig": "#",
-    "whatsapp": "919876543210",
+    "whatsapp": "918010345250",
     "address": "Mumbai, Maharashtra, India",
     "social_tw": "#",
-    "email": "info@syntechdigitals.com"
+    "email": "syntechdigitals912@gmail.com"
   },
   "packages": {
     "badge": "Pricing",
@@ -102,9 +102,9 @@
   },
   "about": {
     "badge": "About Us",
-    "highlight_1": "500+ Projects",
-    "highlight_2": "300+ Clients",
-    "highlight_3": "8+ Years",
+    "highlight_1": "100+ Projects",
+    "highlight_2": "85+ Clients",
+    "highlight_3": "2+ Years",
     "cta": "Learn More About Us",
     "title_accent": "Digital Experts",
     "title": "We're a Team of",
@@ -186,15 +186,15 @@
     "cta_secondary": "View Our Work",
     "mini_stats": [
       {
-        "number": "500+",
+        "number": "100+",
         "label": "Projects"
       },
       {
-        "number": "300+",
+        "number": "85+",
         "label": "Clients"
       },
       {
-        "number": "8+",
+        "number": "2+",
         "label": "Years"
       }
     ]
