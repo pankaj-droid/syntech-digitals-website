@@ -212,7 +212,7 @@ async function injectComponents() {
 
   try {
     const depth = (window.location.pathname.match(/\//g) || []).length > 1 ? '../' : '';
-    const res = await fetch(`${depth}content/data.json`);
+    const res = await fetch(`${depth}content/site.json`);
     const data = await res.json();
 
     if (headerEl) headerEl.innerHTML = buildHeader(data);

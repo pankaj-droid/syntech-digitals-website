@@ -1,0 +1,18 @@
+{
+  "site": {
+    "name": "Syntech Digitals",
+    "tagline": "Digital Marketing Agency",
+    "phone": "+91 98765 43210",
+    "email": "hello@syntechdigitals.com",
+    "address": "Mumbai, Maharashtra, India",
+    "whatsapp": "919876543210",
+    "social_fb": "#",
+    "social_tw": "#",
+    "social_li": "#",
+    "social_ig": "#"
+  },
+  "footer": {
+    "description": "India's leading digital marketing agency helping businesses grow online since 2016. Data-driven strategies, real results.",
+    "copyright": "2025 Syntech Digitals. All rights reserved."
+  }
+}

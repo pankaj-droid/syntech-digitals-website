@@ -1,4 +1,4 @@
-# Netlify Configuration for PixelPulse Digital
+# Netlify Configuration for Syntech Digitals
 
 [build]
   publish = "."

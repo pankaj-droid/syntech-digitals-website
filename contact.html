@@ -186,8 +186,7 @@
     } catch { btn.textContent = 'Send Message →'; btn.disabled = false; }
   });
 
-  // Load contact info from data.json
-  fetch('content/data.json').then(r=>r.json()).then(d => {
+  fetch('content/site.json').then(r=>r.json()).then(d => {
     const s = d.site;
     document.getElementById('contact-phone').textContent = s.phone;
     document.getElementById('contact-email').textContent = s.email;

@@ -338,44 +338,7 @@
       <div class="section-divider"></div>
       <p class="section-sub">Real results from real businesses who trusted us with their digital growth.</p>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="testi-quote">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">Syntech Digitals doubled our organic traffic in just 4 months. Their SEO expertise is truly unmatched. The team is proactive, communicative and results-driven.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">RS</div>
-          <div>
-            <div class="testi-name">Rajesh Sharma</div>
-            <div class="testi-role">CEO, TechStartup India</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-1">
-        <div class="testi-quote">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">Our social media engagement went up by 300%. The team is creative, responsive, and consistently delivers. Best digital marketing agency we've ever worked with.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">PM</div>
-          <div>
-            <div class="testi-name">Priya Mehta</div>
-            <div class="testi-role">Marketing Head, RetailCo</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-2">
-        <div class="testi-quote">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">Best investment we made for our business. Our Google Ads ROI improved by 5x after switching to Syntech Digitals. Highly recommend to any serious business owner!</p>
-        <div class="testi-author">
-          <div class="testi-avatar">AK</div>
-          <div>
-            <div class="testi-name">Amit Kumar</div>
-            <div class="testi-role">Founder, EcomBrand</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="testi-grid" id="testi-grid"></div>
   </div>
 </section>
 
@@ -398,6 +361,26 @@
 <script src="js/components.js"></script>
 <script>
   if(window.netlifyIdentity){window.netlifyIdentity.on("init",u=>{if(!u)window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});})}
+
+  fetch('content/home.json').then(r=>r.json()).then(d=>{
+    const grid = document.getElementById('testi-grid');
+    if(!grid || !d.testimonials) return;
+    const delays = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+    grid.innerHTML = d.testimonials.map((t,i)=>`
+      <div class="testi-card reveal ${delays[i]||''}">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">${'★'.repeat(t.rating||5)}</div>
+        <p class="testi-text">${t.text}</p>
+        <div class="testi-author">
+          <div class="testi-avatar">${t.initials}</div>
+          <div>
+            <div class="testi-name">${t.name}</div>
+            <div class="testi-role">${t.role}</div>
+          </div>
+        </div>
+      </div>`).join('');
+    grid.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+  }).catch(()=>{});
 </script>
 </body>
 </html>

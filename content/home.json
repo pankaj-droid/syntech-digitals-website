@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "initials": "RS",
+      "name": "Rajesh Sharma",
+      "role": "CEO, TechStartup India",
+      "text": "Syntech Digitals doubled our organic traffic in just 4 months. Their SEO expertise is truly unmatched. The team is proactive, communicative and results-driven.",
+      "rating": 5
+    },
+    {
+      "initials": "PM",
+      "name": "Priya Mehta",
+      "role": "Marketing Head, RetailCo",
+      "text": "Our social media engagement went up by 300%. The team is creative, responsive, and consistently delivers. Best digital marketing agency we've ever worked with.",
+      "rating": 5
+    },
+    {
+      "initials": "AK",
+      "name": "Amit Kumar",
+      "role": "Founder, EcomBrand",
+      "text": "Best investment we made for our business. Our Google Ads ROI improved by 5x after switching to Syntech Digitals. Highly recommend to any serious business owner!",
+      "rating": 5
+    }
+  ]
+}

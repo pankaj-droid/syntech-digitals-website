@@ -1,0 +1,189 @@
+{
+  "seo_starter": {
+    "plans": [
+      {
+        "name": "Basic SEO",
+        "price": "8,000",
+        "period": "month",
+        "desc": "Perfect for small businesses starting with SEO.",
+        "badge": "",
+        "cta": "Get Started",
+        "features": [
+          { "included": true,  "text": "5 Target Keywords" },
+          { "included": true,  "text": "On-Page SEO Optimisation" },
+          { "included": true,  "text": "Technical SEO Audit" },
+          { "included": true,  "text": "10 Backlinks/Month" },
+          { "included": true,  "text": "1 Blog Post/Month" },
+          { "included": true,  "text": "Monthly Report" },
+          { "included": false, "text": "Google My Business" },
+          { "included": false, "text": "Competitor Analysis" }
+        ]
+      },
+      {
+        "name": "Standard SEO",
+        "price": "15,000",
+        "period": "month",
+        "desc": "For businesses serious about online growth.",
+        "badge": "Most Popular",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "15 Target Keywords" },
+          { "included": true, "text": "On-Page + Off-Page SEO" },
+          { "included": true, "text": "Technical SEO + Speed Optimisation" },
+          { "included": true, "text": "30 Backlinks/Month" },
+          { "included": true, "text": "3 Blog Posts/Month" },
+          { "included": true, "text": "Google My Business" },
+          { "included": true, "text": "Competitor Analysis" },
+          { "included": true, "text": "Weekly Report" }
+        ]
+      },
+      {
+        "name": "Premium SEO",
+        "price": "25,000",
+        "period": "month",
+        "desc": "Aggressive SEO for competitive markets.",
+        "badge": "",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "30+ Target Keywords" },
+          { "included": true, "text": "Full SEO Strategy" },
+          { "included": true, "text": "60 Backlinks/Month" },
+          { "included": true, "text": "6 Blog Posts/Month" },
+          { "included": true, "text": "Google My Business Pro" },
+          { "included": true, "text": "Advanced Competitor Analysis" },
+          { "included": true, "text": "Dedicated SEO Manager" },
+          { "included": true, "text": "Daily Progress Tracking" }
+        ]
+      }
+    ]
+  },
+  "seo_super": {
+    "plans": [
+      {
+        "name": "Growth Combo",
+        "price": "22,000",
+        "period": "month",
+        "desc": "SEO + Social Media combo for steady growth.",
+        "badge": "",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "10 SEO Keywords" },
+          { "included": true, "text": "Social Media (2 Platforms)" },
+          { "included": true, "text": "12 Social Posts/Month" },
+          { "included": true, "text": "20 Backlinks/Month" },
+          { "included": true, "text": "Google My Business" },
+          { "included": true, "text": "Monthly Report" }
+        ]
+      },
+      {
+        "name": "Super Combo",
+        "price": "35,000",
+        "period": "month",
+        "desc": "The complete digital marketing solution.",
+        "badge": "Best Value",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "20 SEO Keywords" },
+          { "included": true, "text": "Social Media (4 Platforms)" },
+          { "included": true, "text": "24 Social Posts/Month" },
+          { "included": true, "text": "Google Ads Management" },
+          { "included": true, "text": "40 Backlinks/Month" },
+          { "included": true, "text": "4 Blog Posts/Month" },
+          { "included": true, "text": "Dedicated Account Manager" },
+          { "included": true, "text": "Weekly Reports" }
+        ]
+      },
+      {
+        "name": "Enterprise Combo",
+        "price": "60,000",
+        "period": "month",
+        "desc": "Full-scale digital domination.",
+        "badge": "",
+        "cta": "Contact Us",
+        "features": [
+          { "included": true, "text": "Unlimited SEO Keywords" },
+          { "included": true, "text": "All Social Platforms" },
+          { "included": true, "text": "Google + Meta Ads" },
+          { "included": true, "text": "Video Content Creation" },
+          { "included": true, "text": "Email Marketing" },
+          { "included": true, "text": "Dedicated Full Team" },
+          { "included": true, "text": "Daily Reports" },
+          { "included": true, "text": "Monthly Strategy Call" }
+        ]
+      }
+    ]
+  },
+  "website": {
+    "plans": [
+      {
+        "name": "Basic Website",
+        "price": "12,000",
+        "period": "one-time",
+        "desc": "Perfect for small businesses and startups.",
+        "badge": "",
+        "cta": "Get Started",
+        "features": [
+          { "included": true,  "text": "Up to 5 Pages" },
+          { "included": true,  "text": "Mobile Responsive Design" },
+          { "included": true,  "text": "Contact Form" },
+          { "included": true,  "text": "Basic SEO Setup" },
+          { "included": true,  "text": "1 Month Free Support" },
+          { "included": false, "text": "CMS / Admin Panel" },
+          { "included": false, "text": "Blog Section" }
+        ]
+      },
+      {
+        "name": "Business Website",
+        "price": "25,000",
+        "period": "one-time",
+        "desc": "Professional website for growing businesses.",
+        "badge": "Most Popular",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "Up to 10 Pages" },
+          { "included": true, "text": "Custom Design (No Template)" },
+          { "included": true, "text": "CMS / Admin Panel" },
+          { "included": true, "text": "Blog Section" },
+          { "included": true, "text": "Advanced SEO Setup" },
+          { "included": true, "text": "Speed Optimisation" },
+          { "included": true, "text": "3 Months Free Support" }
+        ]
+      },
+      {
+        "name": "E-Commerce Website",
+        "price": "50,000",
+        "period": "one-time",
+        "desc": "Full-featured online store.",
+        "badge": "",
+        "cta": "Get Started",
+        "features": [
+          { "included": true, "text": "Unlimited Pages & Products" },
+          { "included": true, "text": "WooCommerce / Custom Store" },
+          { "included": true, "text": "Payment Gateway Integration" },
+          { "included": true, "text": "Order Management System" },
+          { "included": true, "text": "Inventory Management" },
+          { "included": true, "text": "E-Commerce SEO" },
+          { "included": true, "text": "6 Months Free Support" }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Are there any hidden charges?",
+      "a": "No, absolutely not. The price you see is what you pay. Any additional charges (like ad spend budget) are discussed upfront and with your approval."
+    },
+    {
+      "q": "How long before I see SEO results?",
+      "a": "SEO typically shows noticeable results in 3-6 months. However, we often see improvements in rankings and traffic within the first 4-8 weeks."
+    },
+    {
+      "q": "Is there a contract lock-in period?",
+      "a": "Our minimum commitment is 3 months for SEO services (as SEO requires time to show results), but there are no long-term lock-ins after that."
+    },
+    {
+      "q": "Can I upgrade my package later?",
+      "a": "Yes! You can upgrade your package at any time. We'll simply adjust the billing from the next month."
+    }
+  ]
+}
