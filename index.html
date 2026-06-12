@@ -363,23 +363,92 @@
   if(window.netlifyIdentity){window.netlifyIdentity.on("init",u=>{if(!u)window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});})}
 
   fetch('content/home.json').then(r=>r.json()).then(d=>{
-    const grid = document.getElementById('testi-grid');
-    if(!grid || !d.testimonials) return;
-    const delays = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'];
-    grid.innerHTML = d.testimonials.map((t,i)=>`
-      <div class="testi-card reveal ${delays[i]||''}">
-        <div class="testi-quote">"</div>
-        <div class="testi-stars">${'★'.repeat(t.rating||5)}</div>
-        <p class="testi-text">${t.text}</p>
-        <div class="testi-author">
-          <div class="testi-avatar">${t.initials}</div>
-          <div>
-            <div class="testi-name">${t.name}</div>
-            <div class="testi-role">${t.role}</div>
+
+    // ── Hero ──
+    if(d.hero){
+      const h=d.hero;
+      const tag=document.querySelector('.hero-tag');
+      const h1=document.querySelector('.hero h1');
+      const sub=document.querySelector('.hero .hero-sub');
+      const b1=document.querySelector('.hero .btn-orange');
+      const b2=document.querySelector('.hero .btn-outline-white');
+      if(tag) tag.textContent=h.badge;
+      if(h1)  h1.innerHTML=h.headline;
+      if(sub) sub.textContent=h.subtext;
+      if(b1){b1.textContent=h.cta_primary; if(h.cta_primary_link) b1.href=h.cta_primary_link;}
+      if(b2){b2.textContent=h.cta_secondary; if(h.cta_secondary_link) b2.href=h.cta_secondary_link;}
+    }
+
+    // ── Stats bar ──
+    if(d.stats){
+      document.querySelectorAll('.stats-bar .stat-item').forEach((el,i)=>{
+        if(!d.stats[i]) return;
+        const s=d.stats[i];
+        const num=el.querySelector('[data-target]');
+        const lbl=el.querySelector('.stat-lbl');
+        const ico=el.querySelector('.stat-icon');
+        if(ico) ico.textContent=s.icon;
+        if(num){num.dataset.target=s.number;num.dataset.suffix=s.suffix;num.textContent=s.number+s.suffix;}
+        if(lbl) lbl.textContent=s.label;
+      });
+      if(typeof initCounters==='function') initCounters();
+    }
+
+    // ── About brief ──
+    if(d.about_brief){
+      const a=d.about_brief;
+      const ab=document.querySelector('.about-grid');
+      if(ab){
+        const badge=ab.querySelector('.section-label');
+        const hl=ab.querySelector('.section-title');
+        const desc=ab.querySelector('.about-desc');
+        const feat=ab.querySelector('.about-features');
+        const cta=ab.querySelector('.btn');
+        const yn=ab.querySelector('.big-num');
+        const yl=ab.querySelector('.big-lbl');
+        if(badge) badge.textContent=a.badge;
+        if(hl) hl.innerHTML=a.headline;
+        if(desc) desc.textContent=a.text;
+        if(feat&&a.features) feat.innerHTML=a.features.map(f=>`<li class="af-item"><span class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="af-text">${f}</span></li>`).join('');
+        if(cta) cta.textContent=a.cta;
+        if(yn) yn.textContent=a.years_number;
+        if(yl) yl.textContent=a.years_label;
+      }
+    }
+
+    // ── CTA Banner ──
+    if(d.cta_banner){
+      const c=d.cta_banner;
+      const cta=document.querySelector('.cta-banner .cta-inner');
+      if(cta){
+        const h2=cta.querySelector('h2');
+        const p=cta.querySelector('p');
+        const b1=cta.querySelector('.btn-orange');
+        const b2=cta.querySelector('.btn-outline-white');
+        if(h2) h2.textContent=c.headline;
+        if(p)  p.textContent=c.text;
+        if(b1) b1.textContent=c.btn_primary;
+        if(b2) b2.textContent=c.btn_secondary;
+      }
+    }
+
+    // ── Testimonials ──
+    const grid=document.getElementById('testi-grid');
+    if(grid&&d.testimonials){
+      const delays=['','reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+      grid.innerHTML=d.testimonials.map((t,i)=>`
+        <div class="testi-card reveal ${delays[i]||''}">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">${'★'.repeat(t.rating||5)}</div>
+          <p class="testi-text">${t.text}</p>
+          <div class="testi-author">
+            <div class="testi-avatar">${t.initials}</div>
+            <div><div class="testi-name">${t.name}</div><div class="testi-role">${t.role}</div></div>
           </div>
-        </div>
-      </div>`).join('');
-    grid.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+        </div>`).join('');
+      grid.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+    }
+
   }).catch(()=>{});
 </script>
 </body>
