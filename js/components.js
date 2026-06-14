@@ -106,11 +106,10 @@ function buildHeader(data, depth='') {
     <div class="container">
       <nav class="nav-inner">
         <a href="index.html" class="logo">
-          <img src="${depth}images/logo.png" class="logo-img" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <span class="logo-fallback" style="display:none">
-            <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <span class="logo-text">${s.name.split(' ')[0]} <span>${s.name.split(' ').slice(1).join(' ')}</span></span>
-          </span>
+          <div class="logo-img-clip">
+            <img src="${depth}images/logo.png" class="logo-img" alt="${s.name}">
+          </div>
+          <span class="logo-brand-name">Syntech<em>Digital Media</em></span>
         </a>
 
         <ul class="nav-menu" id="nav-menu">

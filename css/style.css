@@ -918,17 +918,42 @@ html[data-theme="dark"] .logo-text { color:#fff; }
 /* ============================================================
    LOGO IMAGE
    ============================================================ */
+.logo-img-clip {
+  overflow: hidden;
+  height: 50px;
+  flex-shrink: 0;
+  line-height: 0;
+}
 .logo-img {
-  height: 64px;
-  width: auto;
-  max-width: 220px;
-  object-fit: contain;
   display: block;
+  width: 128px;   /* full render: 128*(647/982)=84.3px; clip 50px = top 59% = SD icon only */
+  height: auto;
+  max-width: none;
+}
+.logo-brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.logo-brand-name em {
+  font-style: normal;
+  font-size: 0.64rem;
+  font-weight: 600;
+  color: var(--orange);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 .logo-fallback { display:flex; align-items:center; gap:10px; }
 @media (max-width: 768px) {
-  .logo-img { height: 48px; max-width: 170px; }
+  .logo-img-clip { height: 42px; }
+  .logo-img { width: 107px; }
+  .logo-brand-name { font-size: 0.95rem; }
+  .logo-brand-name em { font-size: 0.58rem; }
 }
-html[data-theme="dark"] .logo-img {
-  filter: brightness(0) invert(1);
-}
+html[data-theme="dark"] .logo-img { filter: brightness(0) invert(1); }
+html[data-theme="dark"] .logo-brand-name { color: #fff; }
