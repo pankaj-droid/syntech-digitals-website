@@ -1,4 +1,4 @@
-{
+﻿{
   "contact": {
     "badge": "Contact",
     "title": "Let's Work Together",
@@ -31,7 +31,7 @@
     "cta_text": "Get Started"
   },
   "site": {
-    "name": "Syntech Digitals",
+    "name": "Syntech Digital Media",
     "phone": "+91 8010345250",
     "tagline": "Digital Marketing Agency",
     "social_fb": "#",
@@ -206,7 +206,7 @@
   },
   "footer": {
     "description": "India's leading digital marketing agency helping businesses grow online since 2016. Data-driven strategies, real results.",
-    "copyright": "2024 Syntech Digitals. All rights reserved."
+    "copyright": "2024 Syntech Digital Media. All rights reserved."
   },
   "services": {
     "badge": "What We Do",

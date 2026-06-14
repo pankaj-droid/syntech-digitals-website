@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service | Syntech Digitals</title>
-  <meta name="description" content="Syntech Digitals digital marketing service details.">
+  <title>Service | Syntech Digital Media</title>
+  <meta name="description" content="Syntech Digital Media digital marketing service details.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -145,10 +145,10 @@ async function loadService() {
   const res = await fetch('content/services.json');
   const all  = await res.json();
   const s    = all[id];
-  if (!s) { document.title = 'Service Not Found | Syntech Digitals'; return; }
+  if (!s) { document.title = 'Service Not Found | Syntech Digital Media'; return; }
 
   // Page title
-  document.title = `${s.title} | Syntech Digitals`;
+  document.title = `${s.title} | Syntech Digital Media`;
 
   // Hero
   document.getElementById('svc-hero-placeholder').innerHTML = `

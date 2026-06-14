@@ -73,7 +73,7 @@ const SVG = {
   x:      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`,
 };
 
-function buildHeader(data) {
+function buildHeader(data, depth='') {
   const s = data.site;
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const SERVICE_SLUGS = ['seo.html','social-media-marketing.html','website-development.html','google-meta-ads.html','graphics-designing.html','ecommerce.html','google-my-business.html','sms-email-marketing.html','web-hosting.html','service.html'];
@@ -106,10 +106,11 @@ function buildHeader(data) {
     <div class="container">
       <nav class="nav-inner">
         <a href="index.html" class="logo">
-          <div class="logo-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <span class="logo-text" id="logo-name">${s.name.split(' ')[0]} <span>${s.name.split(' ').slice(1).join(' ')}</span></span>
+          <img src="${depth}images/logo.png" class="logo-img" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-fallback" style="display:none">
+            <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <span class="logo-text">${s.name.split(' ')[0]} <span>${s.name.split(' ').slice(1).join(' ')}</span></span>
+          </span>
         </a>
 
         <ul class="nav-menu" id="nav-menu">
@@ -268,7 +269,7 @@ async function injectComponents() {
     const res = await fetch(`${depth}content/site.json`);
     const data = await res.json();
 
-    if (headerEl) headerEl.innerHTML = buildHeader(data);
+    if (headerEl) headerEl.innerHTML = buildHeader(data, depth);
     if (footerEl) footerEl.innerHTML = buildFooter(data);
 
     initNav();

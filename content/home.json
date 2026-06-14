@@ -1,4 +1,4 @@
-{
+﻿{
   "hero": {
     "badge": "India's Top Rated Digital Agency",
     "headline": "Grow Your Business Digitally with Experts",
@@ -15,9 +15,9 @@
     { "icon": "📅", "number": "2024","suffix": "",  "label": "Founded In" }
   ],
   "about_brief": {
-    "badge": "About Syntech Digitals",
+    "badge": "About Syntech Digital Media",
     "headline": "We Turn Your Vision Into Digital Success",
-    "text": "Founded in 2024 with a passion for digital growth, Syntech Digitals has helped 85+ businesses transform their online presence. Our team of experts combines creativity with data-driven strategy to deliver measurable results that impact your bottom line.",
+    "text": "Founded in 2024 with a passion for digital growth, Syntech Digital Media has helped 85+ businesses transform their online presence. Our team of experts combines creativity with data-driven strategy to deliver measurable results that impact your bottom line.",
     "years_number": "2+",
     "years_label": "Years of Excellence",
     "features": [
@@ -39,7 +39,7 @@
       "initials": "RS",
       "name": "Rajesh Sharma",
       "role": "CEO, TechStartup India",
-      "text": "Syntech Digitals doubled our organic traffic in just 4 months. Their SEO expertise is truly unmatched. The team is proactive, communicative and results-driven.",
+      "text": "Syntech Digital Media doubled our organic traffic in just 4 months. Their SEO expertise is truly unmatched. The team is proactive, communicative and results-driven.",
       "rating": 5
     },
     {
@@ -53,7 +53,7 @@
       "initials": "AK",
       "name": "Amit Kumar",
       "role": "Founder, EcomBrand",
-      "text": "Best investment we made for our business. Our Google Ads ROI improved by 5x after switching to Syntech Digitals. Highly recommend to any serious business owner!",
+      "text": "Best investment we made for our business. Our Google Ads ROI improved by 5x after switching to Syntech Digital Media. Highly recommend to any serious business owner!",
       "rating": 5
     }
   ]
