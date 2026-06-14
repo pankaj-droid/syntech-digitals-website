@@ -106,10 +106,8 @@ function buildHeader(data, depth='') {
     <div class="container">
       <nav class="nav-inner">
         <a href="index.html" class="logo">
-          <div class="logo-img-clip">
-            <img src="${depth}images/logo.png" class="logo-img" alt="${s.name}">
-          </div>
-          <span class="logo-brand-name">Syntech<em>Digital Media</em></span>
+          <img src="${depth}images/logo-icon.png" class="logo-mark-icon" alt="${s.name}">
+          <span class="logo-text">${s.name.split(' ')[0]} <span>${s.name.split(' ').slice(1).join(' ')}</span></span>
         </a>
 
         <ul class="nav-menu" id="nav-menu">
