@@ -1,0 +1,12 @@
+# Netlify shadow redirects for clean service page URLs
+# 200 = serve the target file without changing the browser URL
+
+/seo.html                   /service.html 200
+/social-media-marketing.html /service.html 200
+/website-development.html   /service.html 200
+/google-meta-ads.html       /service.html 200
+/graphics-designing.html    /service.html 200
+/ecommerce.html             /service.html 200
+/google-my-business.html    /service.html 200
+/sms-email-marketing.html   /service.html 200
+/web-hosting.html           /service.html 200

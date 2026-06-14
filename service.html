@@ -79,14 +79,13 @@
         <ul class="svc-features-list" id="svc-features"></ul>
         <a id="svc-cta" href="contact.html" class="btn btn-blue btn-lg">Get Quote</a>
       </div>
-      <!-- Right: visual mockup -->
+      <!-- Right: service image card -->
       <div class="svc-visual-wrap">
-        <div class="svc-mockup" id="svc-mockup">
-          <div class="sm-hd" id="sm-hd"></div>
-          <div class="sm-body">
-            <div class="sm-benefits" id="sm-benefits"></div>
-            <div class="sm-bars" id="sm-bars"></div>
-            <a id="sm-cta-btn" href="contact.html" class="sm-cta">Request Free Consultation</a>
+        <div class="svc-img-card">
+          <img id="svc-main-img" src="" alt="" loading="lazy">
+          <div class="svc-img-kpis" id="svc-img-kpis"></div>
+          <div class="svc-img-footer">
+            <a href="contact.html" id="sm-cta-btn" class="btn btn-blue btn-full">Request Free Consultation</a>
           </div>
         </div>
       </div>
@@ -125,26 +124,30 @@
 <script>
 const CHECK_SVG=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`;
 
-const BAR_SETS = {
-  seo:       [{lbl:'Keyword Rankings',pct:87,col:'#1a56db'},{lbl:'Domain Authority',pct:72,col:'#f97316'},{lbl:'Page Speed Score',pct:94,col:'#10b981'}],
-  smm:       [{lbl:'Engagement Rate',pct:82,col:'#7c3aed'},{lbl:'Reach Growth',pct:90,col:'#f97316'},{lbl:'Follower Growth',pct:78,col:'#1a56db'}],
-  webdev:    [{lbl:'Performance Score',pct:96,col:'#0891b2'},{lbl:'SEO Score',pct:92,col:'#1a56db'},{lbl:'Mobile Score',pct:98,col:'#10b981'}],
-  ads:       [{lbl:'Click-Through Rate',pct:74,col:'#dc2626'},{lbl:'Conversion Rate',pct:68,col:'#f97316'},{lbl:'ROAS Achievement',pct:89,col:'#10b981'}],
-  graphics:  [{lbl:'Brand Consistency',pct:95,col:'#d97706'},{lbl:'Client Satisfaction',pct:98,col:'#f97316'},{lbl:'On-Time Delivery',pct:100,col:'#10b981'}],
-  ecommerce: [{lbl:'Sales Growth',pct:85,col:'#059669'},{lbl:'Cart Conversion',pct:72,col:'#1a56db'},{lbl:'Return Customers',pct:68,col:'#f97316'}],
-  gmb:       [{lbl:'Local Search Rank',pct:91,col:'#16a34a'},{lbl:'Review Score',pct:96,col:'#f97316'},{lbl:'Call Conversions',pct:83,col:'#1a56db'}],
-  'sms-email':[{lbl:'Email Open Rate',pct:42,col:'#0284c7'},{lbl:'Click Rate',pct:35,col:'#1a56db'},{lbl:'List Growth',pct:78,col:'#10b981'}],
-  hosting:   [{lbl:'Uptime',pct:99.9,col:'#6366f1'},{lbl:'Page Speed',pct:96,col:'#1a56db'},{lbl:'Security Score',pct:100,col:'#10b981'}],
+/* Maps clean filename slugs → service IDs */
+const SLUG_MAP = {
+  'seo':                    'seo',
+  'social-media-marketing': 'smm',
+  'website-development':    'webdev',
+  'google-meta-ads':        'ads',
+  'graphics-designing':     'graphics',
+  'ecommerce':              'ecommerce',
+  'google-my-business':     'gmb',
+  'sms-email-marketing':    'sms-email',
+  'web-hosting':            'hosting',
 };
 
 async function loadService() {
-  const id = new URLSearchParams(location.search).get('id') || 'seo';
+  const urlId    = new URLSearchParams(location.search).get('id');
+  const filename = location.pathname.split('/').pop().replace('.html','');
+  const id       = urlId || SLUG_MAP[filename] || 'seo';
+
   const res = await fetch('content/services.json');
   const all  = await res.json();
   const s    = all[id];
   if (!s) { document.title = 'Service Not Found | Syntech Digitals'; return; }
 
-  // Page title + meta
+  // Page title
   document.title = `${s.title} | Syntech Digitals`;
 
   // Hero
@@ -162,48 +165,37 @@ async function loadService() {
     </section>`;
 
   // Left column
-  document.getElementById('svc-badge').textContent = s.short;
+  document.getElementById('svc-badge').textContent   = s.short;
   document.getElementById('svc-heading').textContent = s.title;
-  document.getElementById('svc-desc').textContent   = s.description;
-  document.getElementById('svc-cta').textContent    = s.cta;
+  document.getElementById('svc-desc').textContent    = s.description;
+  document.getElementById('svc-cta').textContent     = s.cta;
 
   // Features
   document.getElementById('svc-features').innerHTML = s.features.map(f=>`
     <li><span class="chk">${CHECK_SVG}</span>${f}</li>`).join('');
 
-  // Mockup header
-  const hd = document.getElementById('sm-hd');
-  hd.style.background = s.color;
-  hd.innerHTML = `<span style="font-size:1.3rem">${s.emoji}</span> ${s.short} Performance`;
+  // Service image
+  const img = document.getElementById('svc-main-img');
+  img.src = s.image;
+  img.alt = s.title;
 
-  // Benefits
-  document.getElementById('sm-benefits').innerHTML = (s.benefits||[]).map(b=>`
-    <div class="sm-ben">
-      <div class="bico">${b.icon}</div>
-      <div class="bval">${b.val}</div>
-      <div class="blbl">${b.lbl}</div>
+  // KPI benefit cards
+  document.getElementById('svc-img-kpis').innerHTML = (s.benefits||[]).map(b=>`
+    <div class="svc-img-kpi">
+      <div class="kico">${b.icon}</div>
+      <div class="kval" style="color:${s.color}">${b.val}</div>
+      <div class="klbl">${b.lbl}</div>
     </div>`).join('');
 
-  // Bars
-  const bars = BAR_SETS[id] || BAR_SETS.seo;
-  document.getElementById('sm-bars').innerHTML = `
-    <div class="sm-bar-title">Key Metrics</div>
-    ${bars.map(b=>`
-      <div class="sm-bar-row">
-        <span class="sm-bar-lbl">${b.lbl}</span>
-        <div class="sm-track"><div class="sm-fill" style="width:${b.pct}%;background:${b.col}"></div></div>
-        <span class="sm-pct">${b.pct}%</span>
-      </div>`).join('')}`;
-
-  // CTA button color
+  // CTA button
   const ctaBtn = document.getElementById('sm-cta-btn');
   ctaBtn.style.background = s.color;
-  ctaBtn.style.color = '#fff';
+  ctaBtn.style.borderColor = s.color;
 
-  // Other services
+  // Other services (use clean slug URLs)
   document.getElementById('other-services').innerHTML = Object.values(all)
     .filter(sv=>sv.id!==id)
-    .map(sv=>`<a href="service.html?id=${sv.id}" class="os-card">
+    .map(sv=>`<a href="${sv.slug}" class="os-card">
       <span class="os-em">${sv.emoji}</span>
       <span class="os-nm">${sv.short}</span>
     </a>`).join('');

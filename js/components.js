@@ -2,6 +2,62 @@
    Shared Header + Footer injected into every page
    ============================================================ */
 
+/* ---- Theme System ---- */
+const THEMES = [
+  { id:'default', label:'Blue Pro',       swatch:'#1a56db' },
+  { id:'emerald', label:'Emerald Growth', swatch:'#059669' },
+  { id:'purple',  label:'Purple Nova',    swatch:'#7c3aed' },
+  { id:'dark',    label:'Dark Pro',       swatch:'#1e1b4b' },
+];
+
+function initTheme() {
+  const saved = localStorage.getItem('sd-theme') || 'default';
+  if (saved !== 'default') {
+    document.documentElement.setAttribute('data-theme', saved);
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+function buildThemeSwitcher() {
+  const current = localStorage.getItem('sd-theme') || 'default';
+  const wrap = document.createElement('div');
+  wrap.className = 'theme-switcher';
+  wrap.innerHTML = `
+    <div class="ts-panel" id="ts-panel">
+      <div class="ts-head">Choose Theme</div>
+      <div class="ts-options">
+        ${THEMES.map(t=>`
+          <button class="ts-opt${t.id===current?' active':''}" data-theme="${t.id}" style="color:${t.swatch}">
+            <span class="ts-swatch" style="background:${t.swatch}"></span>${t.label}
+          </button>`).join('')}
+      </div>
+    </div>
+    <button class="ts-toggle" id="ts-toggle" title="Change Theme">🎨</button>`;
+  document.body.appendChild(wrap);
+
+  document.getElementById('ts-toggle').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('ts-panel').classList.toggle('open');
+  });
+  document.addEventListener('click', () => {
+    const p = document.getElementById('ts-panel');
+    if (p) p.classList.remove('open');
+  });
+  wrap.querySelectorAll('.ts-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const theme = btn.dataset.theme;
+      localStorage.setItem('sd-theme', theme);
+      initTheme();
+      wrap.querySelectorAll('.ts-opt').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('ts-panel').classList.remove('open');
+    });
+  });
+}
+
+initTheme();
+
 const SVG = {
   chevron: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`,
   phone:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>`,
@@ -20,10 +76,12 @@ const SVG = {
 function buildHeader(data) {
   const s = data.site;
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const SERVICE_SLUGS = ['seo.html','social-media-marketing.html','website-development.html','google-meta-ads.html','graphics-designing.html','ecommerce.html','google-my-business.html','sms-email-marketing.html','web-hosting.html','service.html'];
 
   function isActive(page) {
     if (page === 'index.html' && (currentPage === '' || currentPage === 'index.html')) return 'active';
-    if (page !== 'index.html' && currentPage === page) return 'active';
+    if (page === 'services.html' && (currentPage === 'services.html' || SERVICE_SLUGS.includes(currentPage))) return 'active';
+    if (page !== 'index.html' && page !== 'services.html' && currentPage === page) return 'active';
     return '';
   }
 
@@ -60,25 +118,20 @@ function buildHeader(data) {
           <li class="nav-item">
             <a href="services.html" class="nav-link ${isActive('services.html')}">Services ${SVG.chevron}</a>
             <ul class="dropdown">
-              <li><a href="service.html?id=webdev">${SVG.arrowr} Website Development</a></li>
-              <li><a href="service.html?id=seo">${SVG.arrowr} Search Engine Optimization</a></li>
-              <li><a href="service.html?id=gmb">${SVG.arrowr} Google My Business</a></li>
-              <li><a href="service.html?id=smm">${SVG.arrowr} Social Media Marketing</a></li>
-              <li><a href="service.html?id=sms-email">${SVG.arrowr} SMS & Email Marketing</a></li>
-              <li><a href="service.html?id=graphics">${SVG.arrowr} Graphics Designing</a></li>
-              <li><a href="service.html?id=ads">${SVG.arrowr} Advertising Solutions</a></li>
-              <li><a href="service.html?id=ecommerce">${SVG.arrowr} E-Commerce Website</a></li>
-              <li><a href="service.html?id=hosting">${SVG.arrowr} Web Hosting & Domain</a></li>
+              <li><a href="website-development.html">${SVG.arrowr} Website Development</a></li>
+              <li><a href="seo.html">${SVG.arrowr} Search Engine Optimization</a></li>
+              <li><a href="google-my-business.html">${SVG.arrowr} Google My Business</a></li>
+              <li><a href="social-media-marketing.html">${SVG.arrowr} Social Media Marketing</a></li>
+              <li><a href="sms-email-marketing.html">${SVG.arrowr} SMS &amp; Email Marketing</a></li>
+              <li><a href="graphics-designing.html">${SVG.arrowr} Graphics Designing</a></li>
+              <li><a href="google-meta-ads.html">${SVG.arrowr} Google &amp; Meta Ads</a></li>
+              <li><a href="ecommerce.html">${SVG.arrowr} E-Commerce Website</a></li>
+              <li><a href="web-hosting.html">${SVG.arrowr} Web Hosting &amp; Domain</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="portfolio.html" class="nav-link ${isActive('portfolio.html')}">Portfolio</a></li>
           <li class="nav-item">
-            <a href="packages.html" class="nav-link ${isActive('packages.html')}">Packages ${SVG.chevron}</a>
-            <ul class="dropdown">
-              <li><a href="packages.html#seo-starter">${SVG.arrowr} SEO Starter Packages</a></li>
-              <li><a href="packages.html#seo-super">${SVG.arrowr} SEO Super Packages</a></li>
-              <li><a href="packages.html#website">${SVG.arrowr} Website Packages</a></li>
-            </ul>
+            <a href="packages.html" class="nav-link ${isActive('packages.html')}">Get Quote</a>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link ${isActive('contact.html')}">Contact Us</a></li>
         </ul>
@@ -117,12 +170,12 @@ function buildFooter(data) {
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#web-dev">Website Development</a></li>
-            <li><a href="services.html#seo">SEO</a></li>
-            <li><a href="services.html#social">Social Media Marketing</a></li>
-            <li><a href="services.html#ads">Google & Meta Ads</a></li>
-            <li><a href="services.html#graphics">Graphics Designing</a></li>
-            <li><a href="services.html#ecommerce">E-Commerce</a></li>
+            <li><a href="website-development.html">Website Development</a></li>
+            <li><a href="seo.html">SEO</a></li>
+            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+            <li><a href="google-meta-ads.html">Google &amp; Meta Ads</a></li>
+            <li><a href="graphics-designing.html">Graphics Designing</a></li>
+            <li><a href="ecommerce.html">E-Commerce</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -221,6 +274,7 @@ async function injectComponents() {
     initNav();
     initReveal();
     initCounters();
+    buildThemeSwitcher();
   } catch(e) {
     console.warn('Could not load components:', e);
   }

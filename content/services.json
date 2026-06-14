@@ -1,18 +1,21 @@
 {
   "seo": {
     "id": "seo",
+    "slug": "seo.html",
     "title": "Search Engine Optimization (SEO)",
     "short": "SEO",
     "emoji": "🔍",
     "color": "#1a56db",
     "color_bg": "#dbeafe",
-    "description": "Our comprehensive SEO services help your website rank higher on Google and other search engines, driving targeted organic traffic that converts. We use white-hat techniques and the latest SEO practices to deliver sustainable, long-term results.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    "description": "Rank on the first page of Google and stay there. Our data-driven SEO strategies combine technical excellence, high-authority link building, and content optimization to deliver sustainable organic growth. We have helped businesses achieve 200–400% increase in organic traffic within 6 months using white-hat techniques that Google rewards.",
     "features": [
-      "On-Page & Technical SEO Audit",
-      "Keyword Research & Strategy",
-      "High-Quality Link Building",
-      "Content Optimisation",
-      "Monthly Ranking Reports"
+      "Complete On-Page & Technical SEO Audit",
+      "In-Depth Keyword Research & Competitor Gap Analysis",
+      "High-Authority Backlink Building (DA 40+)",
+      "SEO-Optimized Content Creation",
+      "Google Search Console & Analytics Setup",
+      "Monthly Ranking Progress Reports"
     ],
     "benefits": [
       { "icon": "📈", "val": "+240%", "lbl": "Avg. Traffic Growth" },
@@ -23,18 +26,21 @@
   },
   "smm": {
     "id": "smm",
+    "slug": "social-media-marketing.html",
     "title": "Social Media Marketing",
     "short": "Social Media",
     "emoji": "📱",
     "color": "#7c3aed",
     "color_bg": "#ede9fe",
-    "description": "Build a powerful social media presence that engages your audience, builds brand loyalty, and drives business results. We manage Facebook, Instagram, LinkedIn, YouTube, and Twitter for consistent brand growth.",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80",
+    "description": "Turn your social media into a lead-generating machine. We create compelling content calendars, manage your community, run high-ROI Meta campaigns, and build a brand that people genuinely follow and trust. From Instagram reels to LinkedIn thought leadership — we handle it all so you can focus on running your business.",
     "features": [
-      "Social Media Strategy & Calendar",
-      "Creative Post Design & Copywriting",
-      "Community Management",
-      "Influencer Marketing",
-      "Performance Analytics"
+      "Social Media Strategy & Monthly Content Calendar",
+      "Professional Graphic Design for Every Post",
+      "Reels & Short-Video Production",
+      "Community Management & Comment Replies",
+      "Paid Meta Ads (Facebook & Instagram)",
+      "Monthly Reach, Engagement & Growth Reports"
     ],
     "benefits": [
       { "icon": "👥", "val": "3x", "lbl": "Follower Growth" },
@@ -45,18 +51,21 @@
   },
   "webdev": {
     "id": "webdev",
+    "slug": "website-development.html",
     "title": "Website Development",
     "short": "Web Development",
     "emoji": "💻",
     "color": "#0891b2",
     "color_bg": "#cffafe",
-    "description": "We design and develop modern, fast, mobile-responsive websites that look great, load fast, and convert visitors into customers. From simple landing pages to complex web applications — built to perform.",
+    "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=900&q=80",
+    "description": "Your website is your #1 salesperson — it works 24/7. We design and develop fast, mobile-first, conversion-optimised websites that make a lasting impression. Every pixel is purposeful, every interaction is tested, and every page is built for search engine visibility from the ground up. No templates — just custom code tailored to your brand.",
     "features": [
-      "Custom Design (No Templates)",
-      "Mobile-First Responsive Design",
-      "SEO-Optimised Structure",
-      "Fast Loading Speed",
-      "CMS Integration"
+      "100% Custom Design — No Templates",
+      "Mobile-First Responsive Development",
+      "Google PageSpeed 90+ Optimization",
+      "On-Page SEO Built Into Every Page",
+      "Contact Forms, WhatsApp & Call Integration",
+      "CMS Integration for Easy Content Updates"
     ],
     "benefits": [
       { "icon": "⚡", "val": "< 2s", "lbl": "Page Load Time" },
@@ -67,18 +76,21 @@
   },
   "ads": {
     "id": "ads",
+    "slug": "google-meta-ads.html",
     "title": "Google & Meta Ads",
     "short": "Paid Advertising",
     "emoji": "🎯",
     "color": "#dc2626",
     "color_bg": "#fee2e2",
-    "description": "Maximize your advertising ROI with expertly managed Google Ads (Search, Display, YouTube) and Meta Ads (Facebook & Instagram). We make every rupee count with data-driven targeting and creative that converts.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+    "description": "Stop burning your ad budget on guesswork. Our certified Google and Meta Ads specialists build laser-targeted campaigns that reach your ideal customers at the exact moment they're ready to buy. We manage everything — from audience research and creative design to bid optimization and weekly performance reviews — ensuring every rupee delivers measurable ROI.",
     "features": [
-      "Campaign Setup & Strategy",
-      "Audience Targeting & Retargeting",
-      "Ad Copywriting & Creative Design",
-      "Bid Optimisation & Budget Management",
-      "Conversion Tracking & Reporting"
+      "Google Search, Display & YouTube Campaigns",
+      "Meta Ads (Facebook & Instagram) Management",
+      "Advanced Audience Targeting & Retargeting",
+      "Compelling Ad Copywriting & Creative Design",
+      "Daily Budget Monitoring & Bid Optimization",
+      "Conversion Tracking, ROAS & Weekly Reports"
     ],
     "benefits": [
       { "icon": "💸", "val": "5.2x", "lbl": "Average ROAS" },
@@ -89,18 +101,21 @@
   },
   "graphics": {
     "id": "graphics",
+    "slug": "graphics-designing.html",
     "title": "Graphics Designing",
     "short": "Graphics Design",
     "emoji": "🎨",
     "color": "#d97706",
     "color_bg": "#fef3c7",
-    "description": "Creative, professional graphic designs that make your brand stand out. From logo design to social media creatives, we bring your brand identity to life visually with designs that your audience will remember.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80",
+    "description": "First impressions are visual. Our creative designers craft stunning brand identities, social media graphics, marketing collateral, and UI designs that communicate your value instantly and leave a lasting impression. We blend strategy with aesthetics — every design is not just beautiful but purposefully built to attract, engage, and convert your target audience.",
     "features": [
-      "Logo & Brand Identity Design",
-      "Social Media Post Designs",
-      "Banner & Poster Design",
-      "Brochure & Flyer Design",
-      "Digital Business Card"
+      "Logo Design & Complete Brand Identity Kit",
+      "Social Media Post & Story Templates",
+      "Brochure, Flyer & Catalogue Design",
+      "Digital & Print Banner Design",
+      "WhatsApp Marketing Creatives",
+      "Unlimited Revisions Until Perfect"
     ],
     "benefits": [
       { "icon": "🏷️", "val": "2x", "lbl": "Brand Recall" },
@@ -111,18 +126,21 @@
   },
   "ecommerce": {
     "id": "ecommerce",
+    "slug": "ecommerce.html",
     "title": "E-Commerce Solutions",
     "short": "E-Commerce",
     "emoji": "🛒",
     "color": "#059669",
     "color_bg": "#d1fae5",
-    "description": "Build a powerful online store that sells 24/7. We create feature-rich e-commerce websites on WooCommerce, Shopify, and custom platforms tailored to your business needs and target customers.",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+    "description": "Launch or scale your online store with a platform built for sales. We develop high-converting e-commerce websites on WooCommerce, Shopify, and custom stacks — complete with seamless payment gateways, smart product filtering, and automated inventory management. Our stores are SEO-ready from day one, so customers find you organically too.",
     "features": [
-      "WooCommerce / Shopify Development",
-      "Payment Gateway Integration",
-      "Product Catalogue Management",
-      "E-Commerce SEO & Marketing",
-      "Order & Inventory Management"
+      "WooCommerce & Shopify Development",
+      "Razorpay, PayU & COD Payment Integration",
+      "Product Catalogue with Smart Filters",
+      "Order Management & Inventory Tracking",
+      "Abandoned Cart Recovery Setup",
+      "E-Commerce SEO & Google Shopping Ads"
     ],
     "benefits": [
       { "icon": "💰", "val": "+180%", "lbl": "Sales Growth" },
@@ -133,18 +151,21 @@
   },
   "gmb": {
     "id": "gmb",
+    "slug": "google-my-business.html",
     "title": "Google My Business",
     "short": "GMB",
     "emoji": "📍",
     "color": "#16a34a",
     "color_bg": "#dcfce7",
-    "description": "Dominate local search results and attract nearby customers with optimised Google My Business listing management. Show up when customers search for businesses like yours — and convert those searches into calls and visits.",
+    "image": "https://images.unsplash.com/photo-1553835973-dec43bfddbeb?auto=format&fit=crop&w=900&q=80",
+    "description": "When someone searches for your service near them, are you the first business they see? With our Google My Business optimization, you dominate the local 3-pack — the top Google Maps listings that capture 44% of all local clicks. We optimize your profile, manage reviews, publish regular posts, and ensure your business shows up exactly when nearby customers are looking.",
     "features": [
-      "GMB Profile Setup & Optimisation",
-      "Regular Post Publishing",
-      "Review Management",
-      "Local SEO Integration",
-      "Google Maps Optimisation"
+      "GMB Profile Complete Setup & Verification",
+      "Keyword-Optimised Business Description",
+      "Weekly Google Posts & Offers Publishing",
+      "Review Management & Response Strategy",
+      "Google Maps Ranking Optimization",
+      "Monthly Local SEO Performance Report"
     ],
     "benefits": [
       { "icon": "📞", "val": "+85%", "lbl": "More Calls" },
@@ -155,18 +176,21 @@
   },
   "sms-email": {
     "id": "sms-email",
+    "slug": "sms-email-marketing.html",
     "title": "SMS & Email Marketing",
     "short": "SMS & Email",
     "emoji": "📧",
     "color": "#0284c7",
     "color_bg": "#e0f2fe",
-    "description": "Reach your customers directly in their inbox and phone with targeted SMS and email campaigns that drive repeat business, nurture leads, and boost customer retention at a fraction of the cost of paid ads.",
+    "image": "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=900&q=80",
+    "description": "Direct-to-customer marketing that actually gets seen. With 98% SMS open rates and email ROI of ₹42 for every ₹1 spent, these channels are your most cost-effective tools for customer retention and repeat sales. We design, segment, automate, and continuously optimize your campaigns to nurture leads and keep existing customers coming back.",
     "features": [
-      "Bulk SMS Campaigns",
-      "Email Newsletter Design",
-      "Automated Email Sequences",
-      "List Segmentation & Management",
-      "Open Rate & Click Tracking"
+      "Bulk SMS Campaign Management",
+      "Email Newsletter Design & Scheduling",
+      "Automated Drip Email Sequences",
+      "List Building & Audience Segmentation",
+      "A/B Testing for Subject Lines & CTAs",
+      "Open Rate, Click & Revenue Tracking"
     ],
     "benefits": [
       { "icon": "📬", "val": "42%", "lbl": "Avg. Open Rate" },
@@ -177,23 +201,26 @@
   },
   "hosting": {
     "id": "hosting",
+    "slug": "web-hosting.html",
     "title": "Web Hosting & Domain",
     "short": "Hosting",
     "emoji": "🌐",
     "color": "#6366f1",
     "color_bg": "#e0e7ff",
-    "description": "Reliable, fast, and secure web hosting solutions with 99.9% uptime guarantee. We handle domain registration, SSL certificates, and all technical aspects of keeping your site fast, secure, and online 24/7.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+    "description": "Your website needs a reliable, fast home. We provide fully managed hosting solutions with 99.9% uptime SLA, daily backups, free SSL, and 24/7 technical support. Whether you need shared hosting for a startup site or a dedicated VPS for a high-traffic store — we handle the tech so you can focus on your business.",
     "features": [
-      "Shared, VPS & Dedicated Hosting",
-      "Domain Registration & Transfer",
-      "Free SSL Certificate",
-      "Daily Backups",
-      "24/7 Technical Support"
+      "SSD-Powered Shared, VPS & Dedicated Hosting",
+      "Domain Registration & Transfer Assistance",
+      "Free SSL Certificate (HTTPS)",
+      "Daily Automated Backups",
+      "cPanel Access & Easy Management",
+      "24/7 Technical Support via WhatsApp"
     ],
     "benefits": [
-      { "icon": "⚡", "val": "99.9%", "lbl": "Uptime Guarantee" },
+      { "icon": "⚡", "val": "99.9%", "lbl": "Uptime SLA" },
       { "icon": "🔒", "val": "Free", "lbl": "SSL Certificate" },
-      { "icon": "🛡️", "val": "Daily", "lbl": "Backups" }
+      { "icon": "🛡️", "val": "Daily", "lbl": "Auto Backups" }
     ],
     "cta": "Get Hosting Quote"
   }
