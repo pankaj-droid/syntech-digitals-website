@@ -256,26 +256,41 @@ function initCounters() {
   document.querySelectorAll('[data-target]').forEach(el => obs.observe(el));
 }
 
-async function injectComponents() {
+/* ============================================================
+   SITE DATA — update here to change header/footer across all pages
+   ============================================================ */
+const SITE_DATA = {
+  site: {
+    name:      'Syntech Digital Media',
+    phone:     '+91 8010345250',
+    email:     'syntechdigitals912@gmail.com',
+    address:   'Mumbai, Maharashtra, India',
+    whatsapp:  '918010345250',
+    social_fb: 'https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw==',
+    social_tw: '#',
+    social_li: 'https://www.linkedin.com/in/syntech-digitals-966777414?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    social_ig: 'https://www.instagram.com/syntech.digitals?igsh=MTJ6cXN3b2NpejVmNw==',
+  },
+  footer: {
+    description: "India's leading digital marketing agency helping businesses grow online since 2024. Data-driven strategies, real results.",
+    copyright:   '2024 Syntech Digital Media. All rights reserved.',
+  }
+};
+
+function injectComponents() {
   const headerEl = document.getElementById('header-placeholder');
   const footerEl = document.getElementById('footer-placeholder');
   if (!headerEl && !footerEl) return;
 
-  try {
-    const depth = (window.location.pathname.match(/\//g) || []).length > 1 ? '../' : '';
-    const res = await fetch(`${depth}content/site.json`);
-    const data = await res.json();
+  const depth = (window.location.pathname.match(/\//g) || []).length > 1 ? '../' : '';
 
-    if (headerEl) headerEl.innerHTML = buildHeader(data, depth);
-    if (footerEl) footerEl.innerHTML = buildFooter(data);
+  if (headerEl) headerEl.innerHTML = buildHeader(SITE_DATA, depth);
+  if (footerEl) footerEl.innerHTML = buildFooter(SITE_DATA);
 
-    initNav();
-    initReveal();
-    initCounters();
-    buildThemeSwitcher();
-  } catch(e) {
-    console.warn('Could not load components:', e);
-  }
+  initNav();
+  initReveal();
+  initCounters();
+  buildThemeSwitcher();
 }
 
 document.addEventListener('DOMContentLoaded', injectComponents);
