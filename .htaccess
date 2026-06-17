@@ -2,20 +2,6 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
-# ── Clean service page URLs ──────────────────────────────────
-# These rewrite requests for clean URLs to service.html
-# The JS in service.html reads the filename via location.pathname
-# and maps it to the correct service using SLUG_MAP.
-
-RewriteRule ^seo\.html$                   service.html [L]
-RewriteRule ^social-media-marketing\.html$ service.html [L]
-RewriteRule ^website-development\.html$   service.html [L]
-RewriteRule ^google-meta-ads\.html$       service.html [L]
-RewriteRule ^graphics-designing\.html$    service.html [L]
-RewriteRule ^ecommerce\.html$             service.html [L]
-RewriteRule ^google-my-business\.html$    service.html [L]
-RewriteRule ^sms-email-marketing\.html$   service.html [L]
-RewriteRule ^web-hosting\.html$           service.html [L]
 
 # ── Security Headers ─────────────────────────────────────────
 <IfModule mod_headers.c>
