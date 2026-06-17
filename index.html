@@ -367,36 +367,6 @@
 <script src="js/components.js"></script>
 <script>
   if(window.netlifyIdentity){window.netlifyIdentity.on("init",u=>{if(!u)window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});})}
-
-  fetch('content/home.json').then(r=>r.json()).then(d=>{
-
-    // ── Hero ──
-    if(d.hero){
-      const h=d.hero;
-      const tag=document.querySelector('.hero-tag');
-      const h1=document.querySelector('.hero h1');
-      const sub=document.querySelector('.hero .hero-sub');
-      const b1=document.querySelector('.hero .btn-orange');
-      const b2=document.querySelector('.hero .btn-outline-white');
-      if(tag) tag.textContent=h.badge;
-      if(h1)  h1.innerHTML=h.headline;
-      if(sub) sub.textContent=h.subtext;
-      if(b1){b1.textContent=h.cta_primary; if(h.cta_primary_link) b1.href=h.cta_primary_link;}
-      if(b2){b2.textContent=h.cta_secondary; if(h.cta_secondary_link) b2.href=h.cta_secondary_link;}
-    }
-
-    // ── Stats bar ──
-    if(d.stats){
-      document.querySelectorAll('.stats-bar .stat-item').forEach((el,i)=>{
-        if(!d.stats[i]) return;
-        const s=d.stats[i];
-        const num=el.querySelector('[data-target]');
-        const lbl=el.querySelector('.stat-lbl');
-        const ico=el.querySelector('.stat-icon');
-        if(ico) ico.textContent=s.icon;
-        if(num){num.dataset.target=s.number;num.dataset.suffix=s.suffix;num.textContent=s.number+s.suffix;}
-        if(lbl) lbl.textContent=s.label;
-      });
       if(typeof initCounters==='function') initCounters();
     }
 

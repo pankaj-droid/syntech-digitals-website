@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service | Syntech Digital Media</title>
-  <meta name="description" content="Syntech Digital Media digital marketing service details.">
+  <title>E-Commerce Solutions | Syntech Digital Media</title>
+  <meta name="description" content="Launch or scale your online store with a platform built for sales. We develop high-converting e-commerce websites on WooCommerce, Shopify, and custom stack">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,48 +13,21 @@
     .svc-hero{background:linear-gradient(135deg,var(--blue-dark),var(--blue));padding:80px 0 60px;color:#fff;text-align:center}
     .svc-hero .svc-emoji{font-size:4rem;margin-bottom:16px;display:block}
     .svc-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px}
-    .svc-hero p{font-size:1.05rem;opacity:.88;max-width:620px;margin:0 auto 28px;line-height:1.7}
     .svc-hero .breadcrumb{justify-content:center;opacity:.7}
-    .svc-hero .breadcrumb a{color:#fff}
-    .svc-hero .breadcrumb span{color:#fff}
-
+    .svc-hero .breadcrumb a,.svc-hero .breadcrumb span{color:#fff}
     .svc-detail-layout{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:start;padding:60px 0}
     @media(max-width:900px){.svc-detail-layout{grid-template-columns:1fr;gap:32px}}
-
     .svc-features-list{list-style:none;margin:24px 0 32px}
     .svc-features-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:.93rem}
     .svc-features-list li:last-child{border-bottom:none}
     .svc-features-list .chk{width:22px;height:22px;background:var(--blue-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .svc-features-list .chk svg{width:12px;height:12px;stroke:var(--blue);stroke-width:3}
-
-    /* Visual mockup card */
     .svc-visual-wrap{position:sticky;top:90px}
-    .svc-mockup{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.2)}
-    .sm-hd{padding:16px 20px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.92rem;color:#fff}
-    .sm-body{background:#fff;padding:20px}
-    .sm-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
-    .sm-ben{text-align:center;padding:14px 8px;background:#f8fafc;border-radius:12px;border:1px solid var(--border)}
-    .sm-ben .bico{font-size:1.4rem;margin-bottom:6px}
-    .sm-ben .bval{font-size:1.3rem;font-weight:800;color:var(--blue-dark);line-height:1}
-    .sm-ben .blbl{font-size:.72rem;color:var(--text-muted);margin-top:3px}
-    .sm-bars{background:#f8fafc;border-radius:12px;padding:14px;border:1px solid var(--border)}
-    .sm-bar-title{font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
-    .sm-bar-row{display:grid;grid-template-columns:90px 1fr 36px;gap:8px;align-items:center;margin-bottom:7px}
-    .sm-bar-row:last-child{margin-bottom:0}
-    .sm-bar-lbl{font-size:.77rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .sm-track{height:7px;background:#e2e8f0;border-radius:4px;overflow:hidden}
-    .sm-fill{height:100%;border-radius:4px;transition:width .8s ease}
-    .sm-pct{font-size:.75rem;font-weight:700;text-align:right;color:var(--text-muted)}
-    .sm-cta{margin-top:16px;display:block;width:100%;padding:12px;border-radius:10px;font-weight:700;font-size:.9rem;text-align:center;cursor:pointer;border:none;font-family:inherit;transition:.15s}
-
-    /* Other services */
     .other-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:32px}
     .os-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 12px;background:#fff;border:1.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:.15s;text-align:center}
     .os-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,86,219,.1)}
     .os-card .os-em{font-size:1.8rem}
     .os-card .os-nm{font-size:.8rem;font-weight:600;color:var(--blue-dark)}
-
-    /* Breadcrumb */
     .breadcrumb{display:flex;align-items:center;gap:6px;font-size:.82rem;margin-top:10px;flex-wrap:wrap}
     .breadcrumb a{color:var(--blue);text-decoration:none}
     .breadcrumb .sep{color:var(--text-muted)}
@@ -63,37 +36,69 @@
 <body>
 <div id="header-placeholder"></div>
 
-<!-- Dynamic hero - filled by JS -->
-<div id="svc-hero-placeholder"></div>
+<section class="svc-hero">
+  <div class="container">
+    <span class="svc-emoji">🛒</span>
+    <h1>E-Commerce Solutions</h1>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">&#x203A;</span>
+      <a href="services.html">Services</a><span class="sep">&#x203A;</span>
+      <span>E-Commerce</span>
+    </nav>
+  </div>
+</section>
 
-<!-- Main content -->
 <section class="section section-light" style="padding-top:0">
   <div class="container">
-    <div class="svc-detail-layout" id="svc-layout">
-      <!-- Left: description + features -->
+    <div class="svc-detail-layout">
+
       <div>
-        <span class="section-label" id="svc-badge">Our Service</span>
-        <h2 class="section-title" id="svc-heading" style="margin-top:8px"></h2>
+        <span class="section-label">E-Commerce</span>
+        <h2 class="section-title">E-Commerce Solutions</h2>
         <div class="section-divider"></div>
-        <p id="svc-desc" style="color:var(--text-muted);line-height:1.8;font-size:.95rem;margin-bottom:4px"></p>
-        <ul class="svc-features-list" id="svc-features"></ul>
-        <a id="svc-cta" href="contact.html" class="btn btn-blue btn-lg">Get Quote</a>
+        <p style="color:var(--text-muted);line-height:1.8;font-size:.95rem;margin-bottom:4px">Launch or scale your online store with a platform built for sales. We develop high-converting e-commerce websites on WooCommerce, Shopify, and custom stacks — complete with seamless payment gateways, smart product filtering, and automated inventory management. Our stores are SEO-ready from day one, so customers find you organically too.</p>
+        <ul class="svc-features-list">
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>WooCommerce & Shopify Development</li>
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>Razorpay, PayU & COD Payment Integration</li>
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>Product Catalogue with Smart Filters</li>
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>Order Management & Inventory Tracking</li>
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>Abandoned Cart Recovery Setup</li>
+          <li><span class="chk"><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg></span>E-Commerce SEO & Google Shopping Ads</li>
+        </ul>
+        <a href="contact.html" class="btn btn-blue btn-lg">Get E-Commerce Quote</a>
       </div>
-      <!-- Right: service image card -->
+
       <div class="svc-visual-wrap">
         <div class="svc-img-card">
-          <img id="svc-main-img" src="" alt="" loading="lazy">
-          <div class="svc-img-kpis" id="svc-img-kpis"></div>
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80" alt="E-Commerce Solutions" loading="lazy">
+          <div class="svc-img-kpis">
+          <div class="svc-img-kpi"><div class="kico">💰</div><div class="kval" style="color:#059669">+180%</div><div class="klbl">Sales Growth</div></div>
+          <div class="svc-img-kpi"><div class="kico">🛒</div><div class="kval" style="color:#059669">24/7</div><div class="klbl">Online Selling</div></div>
+          <div class="svc-img-kpi"><div class="kico">📦</div><div class="kval" style="color:#059669">500+</div><div class="klbl">Products Managed</div></div>
+          </div>
           <div class="svc-img-footer">
-            <a href="contact.html" id="sm-cta-btn" class="btn btn-blue btn-full">Request Free Consultation</a>
+            <a href="contact.html" class="btn btn-blue btn-full" style="background:#059669;border-color:#059669">Request Free Consultation</a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Other services -->
+<!-- ============================================================
+     EDITABLE CONTENT SECTION
+     Client: add your h3, p, ul, li content here
+     ============================================================ -->
+<section class="section section-light svc-page-content" style="padding-top:0">
+  <div class="container">
+
+    <!-- Add your content here -->
+
+  </div>
+</section>
+<!-- END EDITABLE CONTENT -->
+
 <section class="section section-alt">
   <div class="container">
     <div class="sec-head center reveal">
@@ -101,16 +106,24 @@
       <h2 class="section-title">Our Other Services</h2>
       <div class="section-divider"></div>
     </div>
-    <div class="other-services" id="other-services"></div>
+    <div class="other-services">
+      <a href="seo.html" class="os-card"><span class="os-em">🔍</span><span class="os-nm">SEO</span></a>
+      <a href="social-media-marketing.html" class="os-card"><span class="os-em">📱</span><span class="os-nm">Social Media</span></a>
+      <a href="website-development.html" class="os-card"><span class="os-em">💻</span><span class="os-nm">Web Development</span></a>
+      <a href="google-meta-ads.html" class="os-card"><span class="os-em">🎯</span><span class="os-nm">Paid Advertising</span></a>
+      <a href="graphics-designing.html" class="os-card"><span class="os-em">🎨</span><span class="os-nm">Graphics Design</span></a>
+      <a href="google-my-business.html" class="os-card"><span class="os-em">📍</span><span class="os-nm">GMB</span></a>
+      <a href="sms-email-marketing.html" class="os-card"><span class="os-em">📧</span><span class="os-nm">SMS & Email</span></a>
+      <a href="web-hosting.html" class="os-card"><span class="os-em">🌐</span><span class="os-nm">Hosting</span></a>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-banner">
   <div class="container">
     <div class="cta-inner reveal">
       <h2>Ready to Get Started?</h2>
-      <p>Talk to our experts for a free consultation — no commitment required.</p>
+      <p>Talk to our experts for a free consultation &mdash; no commitment required.</p>
       <div class="cta-btns">
         <a href="contact.html" class="btn btn-orange btn-lg">Get Free Consultation</a>
         <a href="packages.html" class="btn btn-outline-white btn-lg">View Packages</a>
@@ -121,87 +134,5 @@
 
 <div id="footer-placeholder"></div>
 <script src="js/components.js"></script>
-<script>
-const CHECK_SVG=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`;
-
-/* Maps clean filename slugs → service IDs */
-const SLUG_MAP = {
-  'seo':                    'seo',
-  'social-media-marketing': 'smm',
-  'website-development':    'webdev',
-  'google-meta-ads':        'ads',
-  'graphics-designing':     'graphics',
-  'ecommerce':              'ecommerce',
-  'google-my-business':     'gmb',
-  'sms-email-marketing':    'sms-email',
-  'web-hosting':            'hosting',
-};
-
-async function loadService() {
-  const urlId    = new URLSearchParams(location.search).get('id');
-  const filename = location.pathname.split('/').pop().replace('.html','');
-  const id       = urlId || SLUG_MAP[filename] || 'seo';
-
-  const res = await fetch('content/services.json');
-  const all  = await res.json();
-  const s    = all[id];
-  if (!s) { document.title = 'Service Not Found | Syntech Digital Media'; return; }
-
-  // Page title
-  document.title = `${s.title} | Syntech Digital Media`;
-
-  // Hero
-  document.getElementById('svc-hero-placeholder').innerHTML = `
-    <section class="svc-hero">
-      <div class="container">
-        <span class="svc-emoji">${s.emoji}</span>
-        <h1>${s.title}</h1>
-        <nav class="breadcrumb">
-          <a href="index.html">Home</a><span class="sep">›</span>
-          <a href="services.html">Services</a><span class="sep">›</span>
-          <span>${s.short}</span>
-        </nav>
-      </div>
-    </section>`;
-
-  // Left column
-  document.getElementById('svc-badge').textContent   = s.short;
-  document.getElementById('svc-heading').textContent = s.title;
-  document.getElementById('svc-desc').textContent    = s.description;
-  document.getElementById('svc-cta').textContent     = s.cta;
-
-  // Features
-  document.getElementById('svc-features').innerHTML = s.features.map(f=>`
-    <li><span class="chk">${CHECK_SVG}</span>${f}</li>`).join('');
-
-  // Service image
-  const img = document.getElementById('svc-main-img');
-  img.src = s.image;
-  img.alt = s.title;
-
-  // KPI benefit cards
-  document.getElementById('svc-img-kpis').innerHTML = (s.benefits||[]).map(b=>`
-    <div class="svc-img-kpi">
-      <div class="kico">${b.icon}</div>
-      <div class="kval" style="color:${s.color}">${b.val}</div>
-      <div class="klbl">${b.lbl}</div>
-    </div>`).join('');
-
-  // CTA button
-  const ctaBtn = document.getElementById('sm-cta-btn');
-  ctaBtn.style.background = s.color;
-  ctaBtn.style.borderColor = s.color;
-
-  // Other services (use clean slug URLs)
-  document.getElementById('other-services').innerHTML = Object.values(all)
-    .filter(sv=>sv.id!==id)
-    .map(sv=>`<a href="${sv.slug}" class="os-card">
-      <span class="os-em">${sv.emoji}</span>
-      <span class="os-nm">${sv.short}</span>
-    </a>`).join('');
-}
-
-loadService().catch(e=>console.error(e));
-</script>
 </body>
 </html>

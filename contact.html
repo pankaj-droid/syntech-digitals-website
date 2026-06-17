@@ -191,17 +191,6 @@
       } else { btn.textContent = 'Send Message →'; btn.disabled = false; }
     } catch { btn.textContent = 'Send Message →'; btn.disabled = false; }
   });
-
-  fetch('content/site.json').then(r=>r.json()).then(d => {
-    const s = d.site;
-    document.getElementById('contact-phone').textContent = s.phone;
-    document.getElementById('contact-email').textContent = s.email;
-    document.getElementById('contact-address').textContent = s.address;
-    const waUrl = `https://wa.me/${s.whatsapp}`;
-    document.getElementById('wa-link').href = waUrl;
-    document.getElementById('cta-wa-btn').href = waUrl;
-    document.getElementById('cta-phone-btn').href = `tel:${s.phone}`;
-  }).catch(()=>{});
 </script>
 </body>
 </html>
