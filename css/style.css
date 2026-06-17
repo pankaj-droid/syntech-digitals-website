@@ -916,6 +916,29 @@ html[data-theme="dark"] .svc-img-footer { background:var(--bg-blue); border-colo
 html[data-theme="dark"] .logo-text { color:#fff; }
 
 /* ============================================================
+   SERVICE PAGE RICH CONTENT SECTION (editable by client)
+   ============================================================ */
+.svc-page-content { padding-top: 0; }
+.svc-page-content h3 {
+  font-size: 1.25rem; font-weight: 700; color: var(--blue-dark);
+  margin: 36px 0 12px; font-family: 'Poppins', sans-serif; line-height: 1.35;
+}
+.svc-page-content h3:first-child { margin-top: 0; }
+.svc-page-content p {
+  font-size: .95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px;
+}
+.svc-page-content ul {
+  margin: 0 0 20px 0; padding-left: 0; list-style: none;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px 24px;
+}
+.svc-page-content ul li {
+  font-size: .9rem; color: var(--text); padding: 6px 0 6px 22px; position: relative; line-height: 1.5;
+}
+.svc-page-content ul li::before {
+  content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700;
+}
+
+/* ============================================================
    LOGO IMAGE ICON
    ============================================================ */
 .logo-mark-icon {
