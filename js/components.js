@@ -128,6 +128,7 @@ function buildHeader(data, depth='') {
             </ul>
           </li>
           <li class="nav-item"><a href="portfolio.html" class="nav-link ${isActive('portfolio.html')}">Portfolio</a></li>
+          <li class="nav-item"><a href="blog-local-seo.html" class="nav-link ${isActive('blog-local-seo.html')}">Blog</a></li>
           <li class="nav-item">
             <a href="packages.html" class="nav-link ${isActive('packages.html')}">Get Quote</a>
           </li>
@@ -182,6 +183,7 @@ function buildFooter(data) {
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog-local-seo.html">Blog</a></li>
             <li><a href="packages.html">Packages</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="/admin" target="_blank">Admin Panel</a></li>
